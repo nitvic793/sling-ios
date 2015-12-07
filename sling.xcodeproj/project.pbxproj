@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9050AC931C14123700CEB7AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC921C14123700CEB7AE /* main.m */; };
+		9050AC961C14123700CEB7AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC951C14123700CEB7AE /* AppDelegate.m */; };
+		9050AC991C14123700CEB7AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC981C14123700CEB7AE /* ViewController.m */; };
+		9050AC9E1C14123700CEB7AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9050AC9D1C14123700CEB7AE /* Assets.xcassets */; };
+		90D8162B1C14798F00E69C97 /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8160E1C14798F00E69C97 /* CommonFunction.m */; };
+		90D8162C1C14798F00E69C97 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816101C14798F00E69C97 /* Constants.m */; };
+		90D8162D1C14798F00E69C97 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816121C14798F00E69C97 /* DBManager.m */; };
+		90D8162E1C14798F00E69C97 /* FontIconMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816141C14798F00E69C97 /* FontIconMapping.m */; };
+		90D8162F1C14798F00E69C97 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816161C14798F00E69C97 /* APIManager.m */; };
+		90D816301C14798F00E69C97 /* SCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816181C14798F00E69C97 /* SCollectionViewCell.m */; };
+		90D816311C14798F00E69C97 /* SDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8161A1C14798F00E69C97 /* SDialogViewController.m */; };
+		90D816331C14798F00E69C97 /* ImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8161E1C14798F00E69C97 /* ImagePrefetcher.m */; };
+		90D816341C14798F00E69C97 /* SlingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816201C14798F00E69C97 /* SlingObject.m */; };
+		90D816351C14798F00E69C97 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816221C14798F00E69C97 /* SettingsManager.m */; };
+		90D816361C14798F00E69C97 /* STableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816241C14798F00E69C97 /* STableViewCell.m */; };
+		90D816371C14798F00E69C97 /* NSCustomError.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816261C14798F00E69C97 /* NSCustomError.m */; };
+		90D816381C14798F00E69C97 /* UIImageView+CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816281C14798F00E69C97 /* UIImageView+CommonFunction.m */; };
+		90D816391C14798F00E69C97 /* UILabelCustomStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8162A1C14798F00E69C97 /* UILabelCustomStyle.m */; };
+		90D8163C1C147A3C00E69C97 /* SlingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8163B1C147A3C00E69C97 /* SlingViewController.m */; };
+		90D816471C147BA600E69C97 /* ImageSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8163E1C147BA600E69C97 /* ImageSlider.m */; };
+		90D816481C147BA600E69C97 /* LocalNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816401C147BA600E69C97 /* LocalNotificationView.m */; };
+		90D816491C147BA600E69C97 /* NavigationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816421C147BA600E69C97 /* NavigationHeaderView.m */; };
+		90D8164A1C147BA600E69C97 /* UIDashedLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816441C147BA600E69C97 /* UIDashedLine.m */; };
+		90D8164B1C147BA600E69C97 /* UILabel+CustomStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816461C147BA600E69C97 /* UILabel+CustomStyle.m */; };
+		90D8165F1C147DFB00E69C97 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8165E1C147DFB00E69C97 /* UICountingLabel.m */; };
+		90D816661C147E0600E69C97 /* RavenClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816631C147E0600E69C97 /* RavenClient.m */; };
+		90D816671C147E0600E69C97 /* RavenConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816651C147E0600E69C97 /* RavenConfig.m */; };
+		90D8166E1C147E1000E69C97 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816691C147E1000E69C97 /* JVFloatLabeledTextField.m */; };
+		90D8166F1C147E1000E69C97 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8166B1C147E1000E69C97 /* JVFloatLabeledTextView.m */; };
+		90D816701C147E1000E69C97 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8166D1C147E1000E69C97 /* NSString+TextDirectionality.m */; };
+		90D816731C147E1B00E69C97 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816721C147E1B00E69C97 /* FXBlurView.m */; };
+		90D816761C147E3100E69C97 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816751C147E3100E69C97 /* Appirater.m */; };
+		90D816791C147E6200E69C97 /* Appirater.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 90D816771C147E6200E69C97 /* Appirater.podspec.json */; };
+		90D8167D1C158DF900E69C97 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8167C1C158DF900E69C97 /* Notification.m */; };
+		90D816811C15938900E69C97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90D816831C15938900E69C97 /* Localizable.strings */; };
+		A8F00A49C742E048DCE53DBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C5AD534F037E03E6269EA2 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46C5AD534F037E03E6269EA2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9050AC8E1C14123700CEB7AE /* Sling.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sling.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9050AC921C14123700CEB7AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9050AC941C14123700CEB7AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9050AC951C14123700CEB7AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9050AC971C14123700CEB7AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9050AC981C14123700CEB7AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9050AC9D1C14123700CEB7AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9050ACA21C14123700CEB7AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D8160D1C14798F00E69C97 /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonFunction.h; path = Utils/CommonFunction.h; sourceTree = "<group>"; };
+		90D8160E1C14798F00E69C97 /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonFunction.m; path = Utils/CommonFunction.m; sourceTree = "<group>"; };
+		90D8160F1C14798F00E69C97 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utils/Constants.h; sourceTree = "<group>"; };
+		90D816101C14798F00E69C97 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Utils/Constants.m; sourceTree = "<group>"; };
+		90D816111C14798F00E69C97 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBManager.h; path = Utils/DBManager.h; sourceTree = "<group>"; };
+		90D816121C14798F00E69C97 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBManager.m; path = Utils/DBManager.m; sourceTree = "<group>"; };
+		90D816131C14798F00E69C97 /* FontIconMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontIconMapping.h; path = Utils/FontIconMapping.h; sourceTree = "<group>"; };
+		90D816141C14798F00E69C97 /* FontIconMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FontIconMapping.m; path = Utils/FontIconMapping.m; sourceTree = "<group>"; };
+		90D816151C14798F00E69C97 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIManager.h; path = Utils/APIManager.h; sourceTree = "<group>"; };
+		90D816161C14798F00E69C97 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIManager.m; path = Utils/APIManager.m; sourceTree = "<group>"; };
+		90D816171C14798F00E69C97 /* SCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCollectionViewCell.h; path = Utils/SCollectionViewCell.h; sourceTree = "<group>"; };
+		90D816181C14798F00E69C97 /* SCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCollectionViewCell.m; path = Utils/SCollectionViewCell.m; sourceTree = "<group>"; };
+		90D816191C14798F00E69C97 /* SDialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDialogViewController.h; path = Utils/SDialogViewController.h; sourceTree = "<group>"; };
+		90D8161A1C14798F00E69C97 /* SDialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDialogViewController.m; path = Utils/SDialogViewController.m; sourceTree = "<group>"; };
+		90D8161D1C14798F00E69C97 /* ImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagePrefetcher.h; path = Utils/ImagePrefetcher.h; sourceTree = "<group>"; };
+		90D8161E1C14798F00E69C97 /* ImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagePrefetcher.m; path = Utils/ImagePrefetcher.m; sourceTree = "<group>"; };
+		90D8161F1C14798F00E69C97 /* SlingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlingObject.h; path = Utils/SlingObject.h; sourceTree = "<group>"; };
+		90D816201C14798F00E69C97 /* SlingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlingObject.m; path = Utils/SlingObject.m; sourceTree = "<group>"; };
+		90D816211C14798F00E69C97 /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsManager.h; path = Utils/SettingsManager.h; sourceTree = "<group>"; };
+		90D816221C14798F00E69C97 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Utils/SettingsManager.m; sourceTree = "<group>"; };
+		90D816231C14798F00E69C97 /* STableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STableViewCell.h; path = Utils/STableViewCell.h; sourceTree = "<group>"; };
+		90D816241C14798F00E69C97 /* STableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STableViewCell.m; path = Utils/STableViewCell.m; sourceTree = "<group>"; };
+		90D816251C14798F00E69C97 /* NSCustomError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSCustomError.h; path = Utils/NSCustomError.h; sourceTree = "<group>"; };
+		90D816261C14798F00E69C97 /* NSCustomError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCustomError.m; path = Utils/NSCustomError.m; sourceTree = "<group>"; };
+		90D816271C14798F00E69C97 /* UIImageView+CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+CommonFunction.h"; path = "Utils/UIImageView+CommonFunction.h"; sourceTree = "<group>"; };
+		90D816281C14798F00E69C97 /* UIImageView+CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+CommonFunction.m"; path = "Utils/UIImageView+CommonFunction.m"; sourceTree = "<group>"; };
+		90D816291C14798F00E69C97 /* UILabelCustomStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UILabelCustomStyle.h; path = Utils/UILabelCustomStyle.h; sourceTree = "<group>"; };
+		90D8162A1C14798F00E69C97 /* UILabelCustomStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UILabelCustomStyle.m; path = Utils/UILabelCustomStyle.m; sourceTree = "<group>"; };
+		90D8163A1C147A3C00E69C97 /* SlingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlingViewController.h; path = "View Controllers/SlingViewController.h"; sourceTree = "<group>"; };
+		90D8163B1C147A3C00E69C97 /* SlingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlingViewController.m; path = "View Controllers/SlingViewController.m"; sourceTree = "<group>"; };
+		90D8163D1C147BA600E69C97 /* ImageSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSlider.h; path = "Custom Views/ImageSlider.h"; sourceTree = "<group>"; };
+		90D8163E1C147BA600E69C97 /* ImageSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageSlider.m; path = "Custom Views/ImageSlider.m"; sourceTree = "<group>"; };
+		90D8163F1C147BA600E69C97 /* LocalNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalNotificationView.h; path = "Custom Views/LocalNotificationView.h"; sourceTree = "<group>"; };
+		90D816401C147BA600E69C97 /* LocalNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalNotificationView.m; path = "Custom Views/LocalNotificationView.m"; sourceTree = "<group>"; };
+		90D816411C147BA600E69C97 /* NavigationHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationHeaderView.h; path = "Custom Views/NavigationHeaderView.h"; sourceTree = "<group>"; };
+		90D816421C147BA600E69C97 /* NavigationHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationHeaderView.m; path = "Custom Views/NavigationHeaderView.m"; sourceTree = "<group>"; };
+		90D816431C147BA600E69C97 /* UIDashedLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDashedLine.h; path = "Custom Views/UIDashedLine.h"; sourceTree = "<group>"; };
+		90D816441C147BA600E69C97 /* UIDashedLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDashedLine.m; path = "Custom Views/UIDashedLine.m"; sourceTree = "<group>"; };
+		90D816451C147BA600E69C97 /* UILabel+CustomStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+CustomStyle.h"; path = "Custom Views/UILabel+CustomStyle.h"; sourceTree = "<group>"; };
+		90D816461C147BA600E69C97 /* UILabel+CustomStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+CustomStyle.m"; path = "Custom Views/UILabel+CustomStyle.m"; sourceTree = "<group>"; };
+		90D8165D1C147DFB00E69C97 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICountingLabel.h; path = Libs/UICountingLabel/UICountingLabel.h; sourceTree = "<group>"; };
+		90D8165E1C147DFB00E69C97 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICountingLabel.m; path = Libs/UICountingLabel/UICountingLabel.m; sourceTree = "<group>"; };
+		90D816601C147E0600E69C97 /* Raven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Raven.h; path = Libs/Raven/Raven.h; sourceTree = "<group>"; };
+		90D816611C147E0600E69C97 /* RavenClient_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RavenClient_Private.h; path = Libs/Raven/RavenClient_Private.h; sourceTree = "<group>"; };
+		90D816621C147E0600E69C97 /* RavenClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RavenClient.h; path = Libs/Raven/RavenClient.h; sourceTree = "<group>"; };
+		90D816631C147E0600E69C97 /* RavenClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RavenClient.m; path = Libs/Raven/RavenClient.m; sourceTree = "<group>"; };
+		90D816641C147E0600E69C97 /* RavenConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RavenConfig.h; path = Libs/Raven/RavenConfig.h; sourceTree = "<group>"; };
+		90D816651C147E0600E69C97 /* RavenConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RavenConfig.m; path = Libs/Raven/RavenConfig.m; sourceTree = "<group>"; };
+		90D816681C147E1000E69C97 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextField.h; path = Libs/JVFloatLabeledTextField/JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		90D816691C147E1000E69C97 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextField.m; path = Libs/JVFloatLabeledTextField/JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		90D8166A1C147E1000E69C97 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextView.h; path = Libs/JVFloatLabeledTextField/JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		90D8166B1C147E1000E69C97 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextView.m; path = Libs/JVFloatLabeledTextField/JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		90D8166C1C147E1000E69C97 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+TextDirectionality.h"; path = "Libs/JVFloatLabeledTextField/NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		90D8166D1C147E1000E69C97 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TextDirectionality.m"; path = "Libs/JVFloatLabeledTextField/NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		90D816711C147E1B00E69C97 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = Libs/FXBlurView/FXBlurView.h; sourceTree = "<group>"; };
+		90D816721C147E1B00E69C97 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = Libs/FXBlurView/FXBlurView.m; sourceTree = "<group>"; };
+		90D816741C147E3100E69C97 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Appirater.h; path = Libs/Appirater/Appirater.h; sourceTree = "<group>"; };
+		90D816751C147E3100E69C97 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Appirater.m; path = Libs/Appirater/Appirater.m; sourceTree = "<group>"; };
+		90D816771C147E6200E69C97 /* Appirater.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Appirater.podspec.json; path = Libs/Appirater/Appirater.podspec.json; sourceTree = "<group>"; };
+		90D816781C147E6200E69C97 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppiraterDelegate.h; path = Libs/Appirater/AppiraterDelegate.h; sourceTree = "<group>"; };
+		90D8167A1C14803B00E69C97 /* SlingSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlingSettings.h; sourceTree = "<group>"; };
+		90D8167B1C158DF900E69C97 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Notification.h; path = Models/Notification.h; sourceTree = "<group>"; };
+		90D8167C1C158DF900E69C97 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Notification.m; path = Models/Notification.m; sourceTree = "<group>"; };
+		90D816841C15938D00E69C97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CB62666A8AC424B18BEE7109 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FCF4A359F45AACFB58CA44C7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9050AC8B1C14123700CEB7AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8F00A49C742E048DCE53DBD /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9050AC851C14123700CEB7AE = {
+			isa = PBXGroup;
+			children = (
+				9050AC901C14123700CEB7AE /* Sling */,
+				9050AC8F1C14123700CEB7AE /* Products */,
+				B884CF125C5A7A311486D550 /* Pods */,
+				BEA54FDFD7BBBB6A8744EC6C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9050AC8F1C14123700CEB7AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9050AC8E1C14123700CEB7AE /* Sling.temp_caseinsensitive_rename.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9050AC901C14123700CEB7AE /* Sling */ = {
+			isa = PBXGroup;
+			children = (
+				90D8167E1C15934900E69C97 /* Localizable */,
+				90D8160C1C14203000E69C97 /* Utils */,
+				90D8160B1C14202400E69C97 /* View Controllers */,
+				90D8160A1C14202100E69C97 /* Models */,
+				90D816091C14201D00E69C97 /* Libs */,
+				90D816081C14200B00E69C97 /* Custom Views */,
+				90D816061C141FFE00E69C97 /* Custom Cells */,
+				90D816051C141FEE00E69C97 /* API */,
+				9050AC941C14123700CEB7AE /* AppDelegate.h */,
+				9050AC951C14123700CEB7AE /* AppDelegate.m */,
+				9050AC971C14123700CEB7AE /* ViewController.h */,
+				9050AC981C14123700CEB7AE /* ViewController.m */,
+				9050AC9D1C14123700CEB7AE /* Assets.xcassets */,
+				9050ACA21C14123700CEB7AE /* Info.plist */,
+				9050AC911C14123700CEB7AE /* Supporting Files */,
+				90D8167A1C14803B00E69C97 /* SlingSettings.h */,
+			);
+			name = Sling;
+			path = sling;
+			sourceTree = "<group>";
+		};
+		9050AC911C14123700CEB7AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9050AC921C14123700CEB7AE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90D816051C141FEE00E69C97 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		90D816061C141FFE00E69C97 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		90D816081C14200B00E69C97 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				90D8163D1C147BA600E69C97 /* ImageSlider.h */,
+				90D8163E1C147BA600E69C97 /* ImageSlider.m */,
+				90D8163F1C147BA600E69C97 /* LocalNotificationView.h */,
+				90D816401C147BA600E69C97 /* LocalNotificationView.m */,
+				90D816411C147BA600E69C97 /* NavigationHeaderView.h */,
+				90D816421C147BA600E69C97 /* NavigationHeaderView.m */,
+				90D816431C147BA600E69C97 /* UIDashedLine.h */,
+				90D816441C147BA600E69C97 /* UIDashedLine.m */,
+				90D816451C147BA600E69C97 /* UILabel+CustomStyle.h */,
+				90D816461C147BA600E69C97 /* UILabel+CustomStyle.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		90D816091C14201D00E69C97 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				90D8165C1C147D6600E69C97 /* UICountingLabel */,
+				90D8165B1C147D5F00E69C97 /* Raven */,
+				90D8165A1C147D5700E69C97 /* JVFloatLabeledTextField */,
+				90D816591C147D4B00E69C97 /* FXBlurView */,
+				90D816581C147D4200E69C97 /* Appirater */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		90D8160A1C14202100E69C97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90D8167B1C158DF900E69C97 /* Notification.h */,
+				90D8167C1C158DF900E69C97 /* Notification.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		90D8160B1C14202400E69C97 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				90D8163A1C147A3C00E69C97 /* SlingViewController.h */,
+				90D8163B1C147A3C00E69C97 /* SlingViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		90D8160C1C14203000E69C97 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				90D8160D1C14798F00E69C97 /* CommonFunction.h */,
+				90D8160E1C14798F00E69C97 /* CommonFunction.m */,
+				90D8160F1C14798F00E69C97 /* Constants.h */,
+				90D816101C14798F00E69C97 /* Constants.m */,
+				90D816111C14798F00E69C97 /* DBManager.h */,
+				90D816121C14798F00E69C97 /* DBManager.m */,
+				90D816131C14798F00E69C97 /* FontIconMapping.h */,
+				90D816141C14798F00E69C97 /* FontIconMapping.m */,
+				90D816151C14798F00E69C97 /* APIManager.h */,
+				90D816161C14798F00E69C97 /* APIManager.m */,
+				90D816171C14798F00E69C97 /* SCollectionViewCell.h */,
+				90D816181C14798F00E69C97 /* SCollectionViewCell.m */,
+				90D816191C14798F00E69C97 /* SDialogViewController.h */,
+				90D8161A1C14798F00E69C97 /* SDialogViewController.m */,
+				90D8161D1C14798F00E69C97 /* ImagePrefetcher.h */,
+				90D8161E1C14798F00E69C97 /* ImagePrefetcher.m */,
+				90D8161F1C14798F00E69C97 /* SlingObject.h */,
+				90D816201C14798F00E69C97 /* SlingObject.m */,
+				90D816211C14798F00E69C97 /* SettingsManager.h */,
+				90D816221C14798F00E69C97 /* SettingsManager.m */,
+				90D816231C14798F00E69C97 /* STableViewCell.h */,
+				90D816241C14798F00E69C97 /* STableViewCell.m */,
+				90D816251C14798F00E69C97 /* NSCustomError.h */,
+				90D816261C14798F00E69C97 /* NSCustomError.m */,
+				90D816271C14798F00E69C97 /* UIImageView+CommonFunction.h */,
+				90D816281C14798F00E69C97 /* UIImageView+CommonFunction.m */,
+				90D816291C14798F00E69C97 /* UILabelCustomStyle.h */,
+				90D8162A1C14798F00E69C97 /* UILabelCustomStyle.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		90D816581C147D4200E69C97 /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				90D816771C147E6200E69C97 /* Appirater.podspec.json */,
+				90D816781C147E6200E69C97 /* AppiraterDelegate.h */,
+				90D816741C147E3100E69C97 /* Appirater.h */,
+				90D816751C147E3100E69C97 /* Appirater.m */,
+			);
+			name = Appirater;
+			sourceTree = "<group>";
+		};
+		90D816591C147D4B00E69C97 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				90D816711C147E1B00E69C97 /* FXBlurView.h */,
+				90D816721C147E1B00E69C97 /* FXBlurView.m */,
+			);
+			name = FXBlurView;
+			sourceTree = "<group>";
+		};
+		90D8165A1C147D5700E69C97 /* JVFloatLabeledTextField */ = {
+			isa = PBXGroup;
+			children = (
+				90D816681C147E1000E69C97 /* JVFloatLabeledTextField.h */,
+				90D816691C147E1000E69C97 /* JVFloatLabeledTextField.m */,
+				90D8166A1C147E1000E69C97 /* JVFloatLabeledTextView.h */,
+				90D8166B1C147E1000E69C97 /* JVFloatLabeledTextView.m */,
+				90D8166C1C147E1000E69C97 /* NSString+TextDirectionality.h */,
+				90D8166D1C147E1000E69C97 /* NSString+TextDirectionality.m */,
+			);
+			name = JVFloatLabeledTextField;
+			sourceTree = "<group>";
+		};
+		90D8165B1C147D5F00E69C97 /* Raven */ = {
+			isa = PBXGroup;
+			children = (
+				90D816601C147E0600E69C97 /* Raven.h */,
+				90D816611C147E0600E69C97 /* RavenClient_Private.h */,
+				90D816621C147E0600E69C97 /* RavenClient.h */,
+				90D816631C147E0600E69C97 /* RavenClient.m */,
+				90D816641C147E0600E69C97 /* RavenConfig.h */,
+				90D816651C147E0600E69C97 /* RavenConfig.m */,
+			);
+			name = Raven;
+			sourceTree = "<group>";
+		};
+		90D8165C1C147D6600E69C97 /* UICountingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				90D8165D1C147DFB00E69C97 /* UICountingLabel.h */,
+				90D8165E1C147DFB00E69C97 /* UICountingLabel.m */,
+			);
+			name = UICountingLabel;
+			sourceTree = "<group>";
+		};
+		90D8167E1C15934900E69C97 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				90D816831C15938900E69C97 /* Localizable.strings */,
+			);
+			name = Localizable;
+			sourceTree = "<group>";
+		};
+		B884CF125C5A7A311486D550 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCF4A359F45AACFB58CA44C7 /* Pods.debug.xcconfig */,
+				CB62666A8AC424B18BEE7109 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEA54FDFD7BBBB6A8744EC6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46C5AD534F037E03E6269EA2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9050AC8D1C14123700CEB7AE /* sling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9050ACA51C14123700CEB7AE /* Build configuration list for PBXNativeTarget "sling" */;
+			buildPhases = (
+				2F72DE555BB3CFA2F8C5E5BC /* Check Pods Manifest.lock */,
+				9050AC8A1C14123700CEB7AE /* Sources */,
+				9050AC8B1C14123700CEB7AE /* Frameworks */,
+				9050AC8C1C14123700CEB7AE /* Resources */,
+				E0C521C0DC152AF2D3174892 /* Embed Pods Frameworks */,
+				70B8D011CF11EDA1971E774D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sling;
+			productName = sling;
+			productReference = 9050AC8E1C14123700CEB7AE /* Sling.temp_caseinsensitive_rename.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9050AC861C14123700CEB7AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Bitstax;
+				TargetAttributes = {
+					9050AC8D1C14123700CEB7AE = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 9050AC891C14123700CEB7AE /* Build configuration list for PBXProject "Sling" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9050AC851C14123700CEB7AE;
+			productRefGroup = 9050AC8F1C14123700CEB7AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9050AC8D1C14123700CEB7AE /* sling */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9050AC8C1C14123700CEB7AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9050AC9E1C14123700CEB7AE /* Assets.xcassets in Resources */,
+				90D816811C15938900E69C97 /* Localizable.strings in Resources */,
+				90D816791C147E6200E69C97 /* Appirater.podspec.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F72DE555BB3CFA2F8C5E5BC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		70B8D011CF11EDA1971E774D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0C521C0DC152AF2D3174892 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9050AC8A1C14123700CEB7AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D816371C14798F00E69C97 /* NSCustomError.m in Sources */,
+				90D816661C147E0600E69C97 /* RavenClient.m in Sources */,
+				90D816391C14798F00E69C97 /* UILabelCustomStyle.m in Sources */,
+				90D8162C1C14798F00E69C97 /* Constants.m in Sources */,
+				90D8166E1C147E1000E69C97 /* JVFloatLabeledTextField.m in Sources */,
+				9050AC991C14123700CEB7AE /* ViewController.m in Sources */,
+				90D816311C14798F00E69C97 /* SDialogViewController.m in Sources */,
+				90D816331C14798F00E69C97 /* ImagePrefetcher.m in Sources */,
+				90D816701C147E1000E69C97 /* NSString+TextDirectionality.m in Sources */,
+				90D8164A1C147BA600E69C97 /* UIDashedLine.m in Sources */,
+				90D8162E1C14798F00E69C97 /* FontIconMapping.m in Sources */,
+				9050AC961C14123700CEB7AE /* AppDelegate.m in Sources */,
+				90D816381C14798F00E69C97 /* UIImageView+CommonFunction.m in Sources */,
+				90D816761C147E3100E69C97 /* Appirater.m in Sources */,
+				90D8167D1C158DF900E69C97 /* Notification.m in Sources */,
+				90D816731C147E1B00E69C97 /* FXBlurView.m in Sources */,
+				90D816471C147BA600E69C97 /* ImageSlider.m in Sources */,
+				90D8165F1C147DFB00E69C97 /* UICountingLabel.m in Sources */,
+				90D8166F1C147E1000E69C97 /* JVFloatLabeledTextView.m in Sources */,
+				90D8162F1C14798F00E69C97 /* APIManager.m in Sources */,
+				90D8164B1C147BA600E69C97 /* UILabel+CustomStyle.m in Sources */,
+				90D8162D1C14798F00E69C97 /* DBManager.m in Sources */,
+				90D8162B1C14798F00E69C97 /* CommonFunction.m in Sources */,
+				90D816671C147E0600E69C97 /* RavenConfig.m in Sources */,
+				90D816301C14798F00E69C97 /* SCollectionViewCell.m in Sources */,
+				90D816481C147BA600E69C97 /* LocalNotificationView.m in Sources */,
+				90D816341C14798F00E69C97 /* SlingObject.m in Sources */,
+				90D8163C1C147A3C00E69C97 /* SlingViewController.m in Sources */,
+				90D816361C14798F00E69C97 /* STableViewCell.m in Sources */,
+				90D816351C14798F00E69C97 /* SettingsManager.m in Sources */,
+				9050AC931C14123700CEB7AE /* main.m in Sources */,
+				90D816491C147BA600E69C97 /* NavigationHeaderView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		90D816831C15938900E69C97 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D816841C15938D00E69C97 /* en */,
+			);
+			name = Localizable.strings;
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9050ACA31C14123700CEB7AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9050ACA41C14123700CEB7AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9050ACA61C14123700CEB7AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCF4A359F45AACFB58CA44C7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = sling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitstax.sling;
+				PRODUCT_NAME = Sling.temp_caseinsensitive_rename;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9050ACA71C14123700CEB7AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB62666A8AC424B18BEE7109 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = sling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitstax.sling;
+				PRODUCT_NAME = Sling.temp_caseinsensitive_rename;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9050AC891C14123700CEB7AE /* Build configuration list for PBXProject "Sling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9050ACA31C14123700CEB7AE /* Debug */,
+				9050ACA41C14123700CEB7AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9050ACA51C14123700CEB7AE /* Build configuration list for PBXNativeTarget "sling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9050ACA61C14123700CEB7AE /* Debug */,
+				9050ACA71C14123700CEB7AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9050AC861C14123700CEB7AE /* Project object */;
+}
