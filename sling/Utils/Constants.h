@@ -10,10 +10,9 @@
 #import "UILabelCustomStyle.h"
 #import "SlingSettings.h"
 #import "NSCustomError.h"
-#import "AFHTTPRequestOperationManager.h"
 
 // Completion blocks for API calls
-typedef void (^GOperationCompletionBlock)(AFHTTPRequestOperation *operation, id responseObject);
+typedef void (^GOperationCompletionBlock)(id responseObject);
 typedef void (^SimpleErrorCompletionBlock)(NSCustomError *error);
 
 // HTTP Terms
@@ -26,45 +25,23 @@ static NSString *HTTP_DELETE = @"DELETE";
 @interface Constants : NSObject
 
 #define DEFAULT_DATE_FORMAT   @"yyyy-MM-dd"
-#define PLACEHOLDER_IMG_S     @"placeholder_small_without_padding.jpg"
-#define PLACEHOLDER_IMG_S_P   @"placeholder_small_with_padding.jpg"
-#define PLACEHOLDER_IMG_L     @"placeholder_large.jpg"
-#define PLACEHOLDER_IMG_DETAILS  @"placeholder_detail.jpg"
-#define PLACEHOLDER_IMG_PRODUCT  @"placeholder_product.png"
-#define PLACEHOLDER_IMG_PROMOTION  @"placeholder_promotion.png"
-#define PLACEHOLDER_IMG_PRODUCT_MERCHANT  @"placeholder_highlights.png"
-#define PLACEHOLDER_IMG_PRODUCT_MERCHANT_2  @"placeholder_highlights2.png"
-#define PLACEHOLDER_USER      @"placeholder_user.jpg"
-#define PLACEHOLDER_LOCALITY  @"locality_background.jpg"
-#define GROFERS_LOGO          @"grofer_logo.png"
 
 //********************API***********************
 
-#define GOOGLE_TINY_URL @"https://bit.ly/grfrs"
-#define GOOGLE_PLACES_API_KEY @"AIzaSyDUaMuf0hDHVMiefv9wlYDNSyRROPRWjoo"
-#define GROFERS_APPLE_ID @"960335206"
 #define API_RETRY_COUNT 3
 #define API_LIVE_URL @"api.grofers.com"
 #define API_STAGE_URL @"stage.grofer.in"
-#define API_POST_CHECKOUT_URL @"staging.grofer.in"
-#define API_LOCAL_URL @"172.28.128.2"
-#define API_CDN_URL @"http://cdn.grofers.com/app/images"
-#define ZAAKPAY_MID @"5d84b998793b40219d2e52b1b271a429"
 
-#define API_USER_ACCESS_TOKEN @"access_token"
-#define API_USER_AUTH_TOKEN   @"auth_key"
 
 #define API_NA @"-NA-"
 
-#define INVENTORY_VERSION 3
-#define VERSION_NUMBER 2200
-#define VERSION_NAME   @"2.2"
+#define VERSION_NUMBER 1
+#define VERSION_NAME   @"1.0"
 
 #define NO_RESOURCE_INTERNET_TAG 101110046
 #define NO_RESOURCE_SERVER_TAG   101110049
 #define NO_RESOURCE_RETAKE_TAG   101110040
 
-#define SENTRY_API_KEY @"https://9f2dfae6d58c4c8d9cb2f856261377dd:9beeb20f83c8428ca36f6d719160649b@app.getsentry.com/38383"
 
 //********************* ENDS **************************
 
@@ -93,20 +70,6 @@ static NSString *HTTP_DELETE = @"DELETE";
 #define STATUS_BAR_HEIGHT_ADDITION (SYSTEM_VERSION_LESS_THAN(@"7.0") ? 0.0f : 20.0f)
 #define NO_RESOURCE_FRAME CGRectMake(0, 0,W([self view]), H([self view]))
 
-#define ASPECT_RAITO_MERCHANT_R  (600.0f/250.0f)
-#define ASPECT_RAITO_PROMOTION   (600.0f/380.0f)
-#define ASPECT_RAITO_CINEMA      (600.0f/380.0f)
-#define ASPECT_RAITO_CATEGORY_M  (600.0f/380.0f)
-#define ASPECT_RAITO_CATEGORY_P  (600.0f/380.0f)
-
-#define ASPECT_RAITO_FEED_MERCHANT  (579.0f/1080.0f)
-#define ASPECT_RAITO_FEED_MERCHANT_PRODUCT  (170.0f/906.0f)
-#define ASPECT_RAITO_FEED_PRODUCT  (818.0f/1080.0f)
-#define ASPECT_RAITO_FEED_SUB_CATEGORY ASPECT_RAITO_FEED_PRODUCT
-#define ASPECT_RAITO_FEED_PROMOTION  (485.0f/640.0f)
-
-
-#define GROFER_NUMER @"+911133552400"
 #define RECENT_LOCATION_FETCH_COUNT 5.0f
 
 #define NAV_BAR_ICON_WIDTH    25.0f

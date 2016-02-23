@@ -44,7 +44,7 @@
     for (NSString *image in sliderImages)
     {
         UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(xOffset+sidePad, 0, W(mainScrollView)-2*sidePad, H(mainScrollView))];
-        [imgView setGImageWithURL:[NSURL URLWithString:image] placeholderImage:IMG(PLACEHOLDER_IMG_DETAILS) andLoadingColor:UIColorFromRGB(WHITE_COLOR)];
+        [imgView setGImageWithURL:[NSURL URLWithString:image] placeholderImage:nil andLoadingColor:UIColorFromRGB(WHITE_COLOR)];
         [imgView setContentMode:imageContentMode];
         [mainScrollView addSubview:imgView];
         

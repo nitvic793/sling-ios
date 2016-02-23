@@ -49,7 +49,7 @@
         [self addSubview:barView];
         
         logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(kCellPadding, 17, 36, 36)];
-        [logoImage setImage:IMG(GROFERS_LOGO)];
+        //[logoImage setImage:IMG(GROFERS_LOGO)];
         [[logoImage layer] setCornerRadius:1.0f];
         [[logoImage layer] setMasksToBounds:YES];
         

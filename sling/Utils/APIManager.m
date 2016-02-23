@@ -11,8 +11,7 @@
 #import "SlingObject.h"
 #import "CommonFunction.h"
 
-typedef void (^AFSuccessBlock)(AFHTTPRequestOperation *operation, id responseObject);
-typedef void (^AFFailureBlock)(AFHTTPRequestOperation *operation, NSError *error);
+typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSError *error);
 
 @implementation APIManager
 
@@ -23,7 +22,7 @@ typedef void (^AFFailureBlock)(AFHTTPRequestOperation *operation, NSError *error
     dispatch_once(&onceToken, ^
       {
           _sharedApiManager = [[APIManager alloc] init];
-          _sharedApiManager.apiManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[APIManager baseURLPath]];
+          _sharedApiManager.apiManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[APIManager baseURLPath]];
           NSDictionary *headersDictionary = [APIManager defaultHeaders];
           for (id key in [headersDictionary allKeys])
           {
@@ -65,289 +64,158 @@ typedef void (^AFFailureBlock)(AFHTTPRequestOperation *operation, NSError *error
     return dic;
 }
 
-- (void)sendGetWithStart:(NSInteger)start
+- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
+                                      andMethod:(NSString *)method
+                                      andParams:(NSDictionary *)params
+                                andSuccessBlock:(GOperationCompletionBlock)successBlock
+                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
 {
-    [self sendOperationForClass:nil andMethod:HTTP_GET andHeaders:nil andParams:nil andBody:nil andSuccessBlock:nil andFailureBlock:nil];
+    return [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andNewAPi:NO andSuccessBlock:successBlock andFailureBlock:failureBlock];
 }
 
-
-- (void)sendOperationForClass:(Class)klass
-                    andMethod:(NSString *)method
-                    andParams:(NSDictionary *)params
-              andSuccessBlock:(GOperationCompletionBlock)successBlock
-              andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
+- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
+                                      andMethod:(NSString *)method
+                                      andParams:(NSDictionary *)params
+                                      andNewAPi:(BOOL) isNewApi
+                                andSuccessBlock:(GOperationCompletionBlock)successBlock
+                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
 {
-    [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andNewAPi:NO andSuccessBlock:successBlock andFailureBlock:failureBlock];
+    return [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andNewAPi:isNewApi andSuccessBlock:successBlock andFailureBlock:failureBlock];
 }
 
-- (void)sendOperationForClass:(Class)klass
-                    andMethod:(NSString *)method
-                    andParams:(NSDictionary *)params
-                    andNewAPi:(BOOL) isNewApi
-              andSuccessBlock:(GOperationCompletionBlock)successBlock
-              andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
+- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
+                                      andMethod:(NSString *)method
+                                     andHeaders:(NSDictionary *)headers
+                                      andParams:(NSDictionary *)params
+                                        andBody:(NSData *)body
+                                andSuccessBlock:(GOperationCompletionBlock)successBlock
+                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
 {
-    [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andNewAPi:isNewApi andSuccessBlock:successBlock andFailureBlock:failureBlock];
+    return [self sendOperationForClass:klass andMethod:method andHeaders:headers andParams:params andBody:body andNewAPi:NO andSuccessBlock:successBlock andFailureBlock:failureBlock];
 }
 
-- (void)sendOperationForClass:(Class)klass
-                   andMethod:(NSString *)method
-                  andHeaders:(NSDictionary *)headers
-                   andParams:(NSDictionary *)params
-                     andBody:(NSData *)body
-             andSuccessBlock:(GOperationCompletionBlock)successBlock
-             andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
-{
-    [self sendOperationForClass:klass andMethod:method andHeaders:headers andParams:params andBody:body andNewAPi:NO andSuccessBlock:successBlock andFailureBlock:failureBlock];
-}
-
-- (void)sendOperationForClass:(Class)klass
-                    andMethod:(NSString *)method
-                   andHeaders:(NSDictionary *)headers
-                    andParams:(NSDictionary *)params
-                      andBody:(NSData *)body
-                    andNewAPi:(BOOL) isNewApi
-              andSuccessBlock:(GOperationCompletionBlock)successBlock
-              andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
+- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
+                                      andMethod:(NSString *)method
+                                     andHeaders:(NSDictionary *)headers
+                                      andParams:(NSDictionary *)params
+                                        andBody:(NSData *)body
+                                      andNewAPi:(BOOL) isNewApi
+                                andSuccessBlock:(GOperationCompletionBlock)successBlock
+                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 {
     NSMutableDictionary *requestParams = [[NSMutableDictionary alloc] init];
     //avoiding request params to keep a strong reference of the objects of the params dictionary
     [requestParams addEntriesFromDictionary:[self copyParamsFromDictionary:params]];
     
-    AFSuccessBlock requestSuccess = ^(AFHTTPRequestOperation *operation, id responseObject)
-    {
-        if(isNewApi)
-        {
-            successBlock(operation, responseObject);
-        }
-        else
-        {
-            NSNumber *isSuccess = [responseObject valueForKey:@"success"];
+    AFResponseBlock requestPostBlock = ^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSInteger statusCode = 0;
+            NSHTTPURLResponse *httpResponse = [[error userInfo] objectForKey:AFNetworkingOperationFailingURLResponseErrorKey];
+            if (httpResponse) {
+                statusCode = [httpResponse statusCode];
+            }
             
-            if([isSuccess intValue] == 1)
-            {
-                successBlock(operation, responseObject);
-            }
-            else
-            {
-                // Log success false in Sentry
-                NSString *message = [responseObject objectForKey:@"message"];
-                NSMutableDictionary *additonalDict = [self apiDictToLogWithClass:klass WithParameters:params];
-                [additonalDict setValue:method forKey:REQUEST_METHOD];
-                [CommonFunction logApiwith:message additionalExtra:additonalDict];
+            failureBlock([[NSCustomError alloc] initWithError:error]);
+        } else {
+            if(isNewApi) {
+                successBlock(responseObject);
+            } else {
+                NSNumber *isSuccess = [responseObject valueForKey:@"success"];
                 
-                failureBlock([[NSCustomError alloc] initWithRequestSuccessFalseErrorWithStatusCode:@"" andMessage:message]);
-            }
-        }
-    };
-    
-    AFFailureBlock requestFailure = ^(AFHTTPRequestOperation *operation, NSError *error)
-    {
-        
-    };
-    
-    //sending access token and client id by post
-    NSMutableDictionary *accessTokenDict = [[NSMutableDictionary alloc] init];
-    
-    //modifying url path
-    NSString *apiPath = [klass getAPIPathWithParams:requestParams];
-    
-    AFHTTPRequestOperation *requestOperation;
-    
-    if ([method isEqualToString:HTTP_GET])
-    {
-        NSMutableDictionary * params = [[NSMutableDictionary alloc] initWithDictionary:accessTokenDict];
-        [params addEntriesFromDictionary:requestParams];
-        
-        requestOperation = [[self apiManager] GET:apiPath parameters:params success:requestSuccess failure:requestFailure];
-    }
-    else if ([method isEqualToString:HTTP_POST] || [method isEqualToString:HTTP_PUT])
-    {
-        NSString *api_url = [[NSURL URLWithString:apiPath relativeToURL:[APIManager baseURLPath]] absoluteString];
-        NSMutableURLRequest *request = [self.apiManager.requestSerializer requestWithMethod:method URLString:api_url parameters:requestParams error:nil];
-        
-        if(body)
-        {
-            [request setHTTPBody:body];
-        }
-        
-        requestOperation = [self HTTPRequestOperationWithRequest:request success:requestSuccess failure:requestFailure];
-        [[[self apiManager] operationQueue] addOperation:requestOperation];
-    }
-    else if ([method isEqualToString:HTTP_DELETE])
-    {
-        requestOperation = [[self apiManager] DELETE:apiPath parameters:accessTokenDict success:requestSuccess failure:requestFailure];
-    }
-    
-    [requestOperation setQueuePriority:NSOperationQueuePriorityHigh];
-    
-    //log request
-    if(SLING_DEBUG)
-    {
-        NSLog(@"%@",requestOperation.request.URL);
-        NSLog(@"request body: %@",accessTokenDict);
-    }
-}
-
-- (void) cancelAllRequestsForClass:(Class)klass
-{
-    NSString *matchString = [klass getAPIPath];
-
-    for (NSOperation *operation in [self.apiManager.operationQueue operations])
-    {
-        if (![operation isKindOfClass:[AFHTTPRequestOperation class]])
-        {
-            continue;
-        }
-        
-        NSURLRequest *request = [(AFHTTPRequestOperation *)operation request];
-        NSString *queryString = request.URL.absoluteString;
-        
-        @try {
-            if([queryString rangeOfString:matchString].location != NSNotFound)
-            {
-                if (![operation isCancelled])
+                if([isSuccess intValue] == 1) {
+                    successBlock(responseObject);
+                } else
                 {
-                    [operation cancel];
+                    // Log success false in Sentry
+                    NSString *message = [responseObject objectForKey:@"message"];
+                    NSMutableDictionary *additonalDict = [self apiDictToLogWithClass:klass WithParameters:params];
+                    [additonalDict setValue:method forKey:REQUEST_METHOD];
+                    [CommonFunction logApiwith:message additionalExtra:additonalDict];
+                    
+                    failureBlock([[NSCustomError alloc] initWithRequestSuccessFalseErrorWithStatusCode:@"" andMessage:message]);
                 }
             }
         }
-        @catch (NSException *exception) {
-            
-        }
-        @finally {
-            
-        }
-        
-     
+    };
+    
+    //modifying url path
+    NSString *apiPath = [klass getAPIPathWithParams:requestParams];
+    NSString *api_url = [[NSURL URLWithString:apiPath relativeToURL:[APIManager baseURLPath]] absoluteString];
+    NSMutableURLRequest *request = [self.apiManager.requestSerializer requestWithMethod:method URLString:api_url parameters:requestParams error:nil];
+    
+    if(body) {
+        [request setHTTPBody:body];
     }
+    
+    NSURLSessionDataTask *task = [[self apiManager] dataTaskWithRequest:request completionHandler:requestPostBlock];
+    [task resume];
+    
+    NSLog(@"%@",[[NSURL URLWithString:apiPath relativeToURL:[APIManager baseURLPath]] absoluteString]);
+    
+    return task;
 }
 
-- (void) requestForURL:(NSString*) url
-             withClass:(Class)Klass
-             andMethod:(NSString *)method
-           withHeaders:(NSMutableDictionary *)headers
-        withParameters:(NSDictionary *)params
-               andBody:(NSData *)postBody
-       andSuccessBlock:(GOperationCompletionBlock)successBlock
-       andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
+#pragma mark - Absolute URL ( JSON / HTML )
+
+- (NSURLSessionDataTask *)requestForURL:(NSString*) url
+                              withClass:(Class)Klass
+                              andMethod:(NSString *)method
+                            withHeaders:(NSMutableDictionary *)headers
+                         withParameters:(NSDictionary *)params
+                                andBody:(NSData *)postBody
+                       withHTMLResponse:(BOOL)isHTMLResponse
+                        andSuccessBlock:(GOperationCompletionBlock)successBlock
+                        andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
 {
     NSMutableDictionary *requestParams = [[NSMutableDictionary alloc] init];
     //avoiding request params to keep a strong reference of the objects of the params dictionary
     [requestParams addEntriesFromDictionary:[self copyParamsFromDictionary:params]];
     
-    AFSuccessBlock requestSuccess = ^(AFHTTPRequestOperation *operation, id responseObject)
-    {
-        successBlock(operation, responseObject);
-    };
-    
-    AFFailureBlock requestFailure = ^(AFHTTPRequestOperation *operation, NSError *error)
-    {
-        failureBlock([[NSCustomError alloc] initWithError:error]);
-    };
-    
-    AFHTTPRequestOperationManager *apiManager = [self getCustomApiManager:url withHeaders:headers withHTMLResponse:NO];
-    AFHTTPRequestOperation *requestOperation;
-    
-    if ([method isEqualToString:HTTP_GET])
-    {
-        requestOperation = [apiManager GET:url parameters:params success:requestSuccess failure:requestFailure];
-    }
-    else if ([method isEqualToString:HTTP_POST])
-    {
-        NSMutableURLRequest *request = [apiManager.requestSerializer requestWithMethod:@"POST" URLString:url parameters:requestParams error:nil];
-        
-        if(postBody)
-        {
-            [request setHTTPBody:postBody];
+    AFResponseBlock requestPostBlock = ^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            failureBlock([[NSCustomError alloc] initWithError:error]);
+        } else {
+            successBlock(responseObject);
         }
-        
-        requestOperation = [apiManager HTTPRequestOperationWithRequest:request success:requestSuccess failure:requestFailure];
-    }
-    else
-    {
-        NSLog(@"unsupported method for absolute URL");
+    };
+    
+    AFHTTPSessionManager *apiManager = [self getCustomApiManager:url withHeaders:headers withHTMLResponse:isHTMLResponse];
+    
+    NSMutableURLRequest *request = [apiManager.requestSerializer requestWithMethod:method URLString:url parameters:requestParams error:nil];
+    
+    if(postBody) {
+        [request setHTTPBody:postBody];
     }
     
-    [requestOperation setQueuePriority:NSOperationQueuePriorityHigh];
-    NSLog(@"request URL: %@",requestOperation.request.URL);
+    NSURLSessionDataTask *task = [apiManager dataTaskWithRequest:request completionHandler:requestPostBlock];
+    [task resume];
+    
+    NSLog(@"request URL: %@",url);
+    
+    return task;
 }
 
-- (void) requestForURLWithHTMLResponse:(NSString *)url
-                             withClass:(Class)Klass
-                             andMethod:(NSString *)method
-                           withHeaders:(NSMutableDictionary *)headers
-                        withParameters:(NSDictionary *)params
-                               andBody:(NSData *)postBody
-                       andSuccessBlock:(GOperationCompletionBlock)successBlock
-                       andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
+- (AFHTTPSessionManager *)getCustomApiManager:(NSString *) url
+                                  withHeaders:(NSMutableDictionary *) headers
+                             withHTMLResponse:(BOOL) isHTMLResponse
 {
-    NSMutableDictionary *requestParams = [[NSMutableDictionary alloc] init];
-    //avoiding request params to keep a strong reference of the objects of the params dictionary
-    [requestParams addEntriesFromDictionary:[self copyParamsFromDictionary:params]];
+    AFHTTPSessionManager *apiManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:url]];
     
-    AFSuccessBlock requestSuccess = ^(AFHTTPRequestOperation *operation, id responseObject)
-    {
-        successBlock(operation, responseObject);
-    };
-    
-    AFFailureBlock requestFailure = ^(AFHTTPRequestOperation *operation, NSError *error)
-    {
-        failureBlock([[NSCustomError alloc] initWithError:error]);
-    };
-    
-    AFHTTPRequestOperationManager *apiManager = [self getCustomApiManager:url withHeaders:headers withHTMLResponse:YES];
-    AFHTTPRequestOperation *requestOperation;
-    
-    if ([method isEqualToString:HTTP_GET])
-    {
-        requestOperation = [apiManager GET:url parameters:params success:requestSuccess failure:requestFailure];
-    }
-    else if ([method isEqualToString:HTTP_POST])
-    {
-        NSMutableURLRequest *request = [apiManager.requestSerializer requestWithMethod:@"POST" URLString:url parameters:requestParams error:nil];
-        
-        if(postBody)
-        {
-            [request setHTTPBody:postBody];
-        }
-        
-        requestOperation = [apiManager HTTPRequestOperationWithRequest:request success:requestSuccess failure:requestFailure];
-        [requestOperation setQueuePriority:NSOperationQueuePriorityHigh];
-        
-        [[apiManager operationQueue] addOperation:requestOperation];
-    }
-    else
-    {
-        NSLog(@"unsupported method for absolute URL");
-    }
-    
-    NSLog(@"request URL: %@",requestOperation.request.URL);
-}
-
-- (AFHTTPRequestOperationManager *)getCustomApiManager:(NSString *) url
-                                           withHeaders:(NSMutableDictionary *) headers
-                                      withHTMLResponse:(BOOL) isHTMLResponse
-{
-    AFHTTPRequestOperationManager *apiManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:url]];
-    
-    if (isHTMLResponse)
-    {
+    if (isHTMLResponse) {
         NSMutableSet *contentSet = [[NSMutableSet alloc] initWithSet:[[apiManager responseSerializer] acceptableContentTypes]];
         [contentSet addObject:@"text/html"];
         [contentSet addObject:@"text/plain"];
         [[apiManager responseSerializer] setAcceptableContentTypes:contentSet];
     }
     
-    for (id key in [headers allKeys])
-    {
+    for (id key in [headers allKeys]) {
         [[apiManager requestSerializer] setValue:[headers objectForKey:key] forHTTPHeaderField:key];
     }
     
     return apiManager;
 }
 
-#pragma mark AFHTTPRequestOperationDelegate
+#pragma mark - AFHTTPRequestOperationDelegate
 
 - (NSString *)getAPIPath:(NSString *)apiPath WithQureyString:(NSString *)queryString
 {
@@ -399,23 +267,13 @@ typedef void (^AFFailureBlock)(AFHTTPRequestOperation *operation, NSError *error
     [URLComponent setPath:@"/"];
     
     if ([[APIManager getCurrentURLTarget] isEqualToString:API_LIVE_URL] ||
-        [[APIManager getCurrentURLTarget] isEqualToString:API_STAGE_URL] ||
-        [[APIManager getCurrentURLTarget] isEqualToString:API_POST_CHECKOUT_URL]
-        )
+        [[APIManager getCurrentURLTarget] isEqualToString:API_STAGE_URL])
     {
         URLComponent.scheme = @"https";
     }
     else
     {
         URLComponent.scheme = @"http";
-    }
-    
-    // Override for local api
-    
-    if ([[APIManager getCurrentURLTarget] isEqualToString:API_LOCAL_URL])
-    {
-        [URLComponent setScheme:@"http"];
-        [URLComponent setPort:@(8000)];
     }
     
     return [URLComponent URL];
@@ -433,7 +291,7 @@ typedef void (^AFFailureBlock)(AFHTTPRequestOperation *operation, NSError *error
 
 + (NSArray *) apiURLs
 {
-    return @[@"pre.grofer.it", @"ref.grofer.it", API_STAGE_URL, @"stage.grofer.it", API_LIVE_URL, @"api.grofer.it",API_POST_CHECKOUT_URL];
+    return @[API_STAGE_URL, API_LIVE_URL];
 }
 
 + (NSString *) defaultURL

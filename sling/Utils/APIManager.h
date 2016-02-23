@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFHTTPRequestOperationManager.h"
+#import "AFHTTPSessionManager.h"
 #import "Constants.h"
 #import "NSCustomError.h"
 
@@ -24,9 +24,9 @@
 #define REQUEST_USER      @"REQUEST_USER"
 #define REQUEST_AUTHORITY @"REQUEST_AUTHORITY"
 
-@interface APIManager : AFHTTPRequestOperationManager
+@interface APIManager : AFHTTPSessionManager
 
-@property (strong, nonatomic) AFHTTPRequestOperationManager *apiManager;
+@property (strong, nonatomic) AFHTTPSessionManager *apiManager;
 
 + (APIManager *)sharedManager;
 
@@ -35,60 +35,46 @@
 + (NSString *) getCurrentURLTarget;
 + (NSDictionary *) defaultHeaders;
 
-- (void)sendGetWithStart:(NSInteger)start;
+- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
+                                      andMethod:(NSString *)method
+                                      andParams:(NSDictionary *)params
+                                andSuccessBlock:(GOperationCompletionBlock)successBlock
+                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 
-- (void)sendOperationForClass:(Class)klass
-                    andMethod:(NSString *)method
-                    andParams:(NSDictionary *)params
-              andSuccessBlock:(GOperationCompletionBlock)successBlock
-              andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
-
-- (void)sendOperationForClass:(Class)klass
-                    andMethod:(NSString *)method
-                    andParams:(NSDictionary *)params
-                    andNewAPi:(BOOL) isNewApi
-              andSuccessBlock:(GOperationCompletionBlock)successBlock
-              andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
+- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
+                                      andMethod:(NSString *)method
+                                      andParams:(NSDictionary *)params
+                                      andNewAPi:(BOOL) isNewApi
+                                andSuccessBlock:(GOperationCompletionBlock)successBlock
+                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 
 
-- (void)sendOperationForClass:(Class)klass
-                    andMethod:(NSString *)method
-                   andHeaders:(NSDictionary *)headers
-                    andParams:(NSDictionary *)params
-                      andBody:(NSData *)body
-              andSuccessBlock:(GOperationCompletionBlock)successBlock
-              andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
+- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
+                                      andMethod:(NSString *)method
+                                     andHeaders:(NSDictionary *)headers
+                                      andParams:(NSDictionary *)params
+                                        andBody:(NSData *)body
+                                andSuccessBlock:(GOperationCompletionBlock)successBlock
+                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 
-- (void)sendOperationForClass:(Class)klass
-                    andMethod:(NSString *)method
-                   andHeaders:(NSDictionary *)headers
-                    andParams:(NSDictionary *)params
-                      andBody:(NSData *)body
-                    andNewAPi:(BOOL) isNewApi
-              andSuccessBlock:(GOperationCompletionBlock)successBlock
-              andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
+- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
+                                      andMethod:(NSString *)method
+                                     andHeaders:(NSDictionary *)headers
+                                      andParams:(NSDictionary *)params
+                                        andBody:(NSData *)body
+                                      andNewAPi:(BOOL) isNewApi
+                                andSuccessBlock:(GOperationCompletionBlock)successBlock
+                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 
+#pragma mark - Absolute URL ( JSON / HTML )
 
-- (void) cancelAllRequestsForClass:(Class)klass;
-
-// FOR ABSOLUTE URL's JSON
-- (void) requestForURL:(NSString*) url
-             withClass:(Class)Klass
-             andMethod:(NSString *)method
-           withHeaders:(NSMutableDictionary *)headers
-        withParameters:(NSDictionary *)params
-               andBody:(NSData *)postBody
-       andSuccessBlock:(GOperationCompletionBlock)successBlock
-       andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
-
-// FOR ABSOLUTE URL's HTML
-- (void) requestForURLWithHTMLResponse:(NSString*) url
-             withClass:(Class)Klass
-             andMethod:(NSString *)method
-           withHeaders:(NSMutableDictionary *)headers
-        withParameters:(NSDictionary *)params
-               andBody:(NSData *)postBody
-       andSuccessBlock:(GOperationCompletionBlock)successBlock
-       andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
-
+- (NSURLSessionDataTask *) requestForURL:(NSString*) url
+                               withClass:(Class)Klass
+                               andMethod:(NSString *)method
+                             withHeaders:(NSMutableDictionary *)headers
+                          withParameters:(NSDictionary *)params
+                                 andBody:(NSData *)postBody
+                        withHTMLResponse:(BOOL)isHTMLResponse
+                         andSuccessBlock:(GOperationCompletionBlock)successBlock
+                         andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 @end
