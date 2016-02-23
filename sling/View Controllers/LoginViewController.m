@@ -65,17 +65,22 @@
 
 - (void) loginButtonClicked:(id)sender {
     [SVProgressHUD show];
-    [[APIManager sharedManager] sendOperationForClass:[LoginViewController class] andMethod:HTTP_POST andParams:@{@"username": usernameField.text, @"password": passwordField.text} andNewAPi:NO andSuccessBlock:^(id responseObject) {
-        if ([[(NSDictionary *)responseObject objectForKey:@"status"] isEqualToString:@"1"]) {
-            [SVProgressHUD showSuccessWithStatus:@"Logged In"];
-            
-        } else {
-            [SVProgressHUD showSuccessWithStatus:@"Login Error"];
-        }
-        [SVProgressHUD showSuccessWithStatus:@"Logged In"];
-    } andFailureBlock:^(NSCustomError *error) {
+    [[APIManager sharedManager] sendOperationForURL:@"login"
+                                          andMethod:HTTP_POST
+                                         andHeaders:nil
+                                          andParams:@{@"username": usernameField.text, @"password": passwordField.text}
+                                            andBody:nil
+                                    andSuccessBlock:^(id responseObject) {
+                                        if ([[(NSDictionary *)responseObject objectForKey:@"status"] isEqualToString:@"1"]) {
+                                            [SVProgressHUD showSuccessWithStatus:@"Logged In"];
+                                        } else {
+                                            [SVProgressHUD showSuccessWithStatus:@"Login Error"];
+                                        }
+                                        [SVProgressHUD showSuccessWithStatus:@"Logged In"];
+                                    }
+                                    andFailureBlock:^(NSCustomError *error) {
         
-    }];
+                                    }];
 }
 
 -(BOOL) prefersStatusBarHidden

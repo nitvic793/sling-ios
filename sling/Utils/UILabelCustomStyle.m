@@ -7,6 +7,7 @@
 //
 
 #import "UILabelCustomStyle.h"
+#import "Constants.h"
 
 @implementation UILabelCustomStyle
 

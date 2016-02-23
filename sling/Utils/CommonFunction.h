@@ -110,17 +110,12 @@ typedef NS_ENUM(NSUInteger, iPhone) {
 + (UINavigationController *) getNavigationControllerForViewController:(UIViewController *)viewController;
 
 + (UIViewController *) getLoginViewController;
-
-+ (UIViewController *) getParentChatViewController;
-+ (UIViewController *) getParentNoticeBoardViewController;
-+ (UIViewController *) getParentReviewViewController;
-+ (UIViewController *) getParentSettingsViewController;
-
-+ (UIViewController *) getTeacherChatViewController;
-+ (UIViewController *) getTeacherNoticeBoardViewController;
-+ (UIViewController *) getTeacherReviewViewController;
-+ (UIViewController *) getTeacherSettingsViewController;
-
+// Home Tabs
++ (UIViewController *) getHomeTabViewController;
++ (UIViewController *) getChatViewController;
++ (UIViewController *) getNoticeBoardViewController;
++ (UIViewController *) getReviewViewController;
++ (UIViewController *) getSettingsViewController;
 
 #pragma mark -  UIVIEWS
 

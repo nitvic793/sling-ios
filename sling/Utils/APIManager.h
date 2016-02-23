@@ -35,27 +35,13 @@
 + (NSString *) getCurrentURLTarget;
 + (NSDictionary *) defaultHeaders;
 
-- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
-                                      andMethod:(NSString *)method
-                                      andParams:(NSDictionary *)params
-                                andSuccessBlock:(GOperationCompletionBlock)successBlock
-                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
-
-- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
-                                      andMethod:(NSString *)method
-                                      andParams:(NSDictionary *)params
-                                      andNewAPi:(BOOL) isNewApi
-                                andSuccessBlock:(GOperationCompletionBlock)successBlock
-                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
-
-
-- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
-                                      andMethod:(NSString *)method
-                                     andHeaders:(NSDictionary *)headers
-                                      andParams:(NSDictionary *)params
-                                        andBody:(NSData *)body
-                                andSuccessBlock:(GOperationCompletionBlock)successBlock
-                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
+- (NSURLSessionDataTask *)sendOperationForURL:(NSString *) apiPath
+                                    andMethod:(NSString *)method
+                                   andHeaders:(NSDictionary *)headers
+                                    andParams:(NSDictionary *)params
+                                      andBody:(NSData *)body
+                              andSuccessBlock:(GOperationCompletionBlock)successBlock
+                              andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 
 #pragma mark - Absolute URL ( JSON / HTML )
 
