@@ -64,32 +64,13 @@ typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSEr
     return dic;
 }
 
-- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
-                                      andMethod:(NSString *)method
-                                      andParams:(NSDictionary *)params
-                                andSuccessBlock:(GOperationCompletionBlock)successBlock
-                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
-{
-    return [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andSuccessBlock:successBlock andFailureBlock:failureBlock];
-}
-
-- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
-                                      andMethod:(NSString *)method
-                                      andParams:(NSDictionary *)params
-                                      andNewAPi:(BOOL) isNewApi
-                                andSuccessBlock:(GOperationCompletionBlock)successBlock
-                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
-{
-    return [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andSuccessBlock:successBlock andFailureBlock:failureBlock];
-}
-
-- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
-                                      andMethod:(NSString *)method
-                                     andHeaders:(NSDictionary *)headers
-                                      andParams:(NSDictionary *)params
-                                        andBody:(NSData *)body
-                                andSuccessBlock:(GOperationCompletionBlock)successBlock
-                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
+- (NSURLSessionDataTask *)sendOperationForURL:(NSString *) apiPath
+                                    andMethod:(NSString *)method
+                                   andHeaders:(NSDictionary *)headers
+                                    andParams:(NSDictionary *)params
+                                      andBody:(NSData *)body
+                              andSuccessBlock:(GOperationCompletionBlock)successBlock
+                              andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 {
     NSMutableDictionary *requestParams = [[NSMutableDictionary alloc] init];
     //avoiding request params to keep a strong reference of the objects of the params dictionary
@@ -108,9 +89,7 @@ typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSEr
             successBlock(responseObject);
         }
     };
-    
-    //modifying url path
-    NSString *apiPath = [klass getAPIPathWithParams:requestParams];
+   
     NSString *api_url = [[NSURL URLWithString:apiPath relativeToURL:[APIManager baseURLPath]] absoluteString];
     NSMutableURLRequest *request = [self.apiManager.requestSerializer requestWithMethod:method URLString:api_url parameters:requestParams error:nil];
     

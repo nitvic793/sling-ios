@@ -7,6 +7,7 @@
 //
 
 #import "ImageSlider.h"
+#import "CommonFunction.h"
 
 @implementation ImageSlider
 {
