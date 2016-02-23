@@ -9,23 +9,37 @@
 /* Begin PBXBuildFile section */
 		9050AC931C14123700CEB7AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC921C14123700CEB7AE /* main.m */; };
 		9050AC961C14123700CEB7AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC951C14123700CEB7AE /* AppDelegate.m */; };
-		9050AC991C14123700CEB7AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC981C14123700CEB7AE /* ViewController.m */; };
 		9050AC9E1C14123700CEB7AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9050AC9D1C14123700CEB7AE /* Assets.xcassets */; };
+		907E84121C7CC7CD005FFFB5 /* ClassNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84051C7CC7CD005FFFB5 /* ClassNumber.m */; };
+		907E84131C7CC7CD005FFFB5 /* NoticeBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84071C7CC7CD005FFFB5 /* NoticeBoard.m */; };
+		907E84141C7CC7CD005FFFB5 /* Parent.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84091C7CC7CD005FFFB5 /* Parent.m */; };
+		907E84151C7CC7CD005FFFB5 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E840B1C7CC7CD005FFFB5 /* Review.m */; };
+		907E84161C7CC7CD005FFFB5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E840D1C7CC7CD005FFFB5 /* Student.m */; };
+		907E84171C7CC7CD005FFFB5 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E840F1C7CC7CD005FFFB5 /* Teacher.m */; };
+		907E84181C7CC7CD005FFFB5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84111C7CC7CD005FFFB5 /* User.m */; };
+		907E841D1C7CC7EC005FFFB5 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */; };
+		907E84201C7CC802005FFFB5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E841F1C7CC802005FFFB5 /* LoginViewController.m */; };
+		907E84291C7CC814005FFFB5 /* ParentChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84221C7CC814005FFFB5 /* ParentChatViewController.m */; };
+		907E842A1C7CC814005FFFB5 /* ParentNoticeBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84241C7CC814005FFFB5 /* ParentNoticeBoardViewController.m */; };
+		907E842B1C7CC814005FFFB5 /* ParentReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84261C7CC814005FFFB5 /* ParentReviewViewController.m */; };
+		907E842C1C7CC814005FFFB5 /* ParentSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84281C7CC814005FFFB5 /* ParentSettingsViewController.m */; };
+		907E84351C7CC81F005FFFB5 /* TeacherChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E842E1C7CC81F005FFFB5 /* TeacherChatViewController.m */; };
+		907E84361C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84301C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m */; };
+		907E84371C7CC81F005FFFB5 /* TeacherReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84321C7CC81F005FFFB5 /* TeacherReviewViewController.m */; };
+		907E84381C7CC81F005FFFB5 /* TeacherSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84341C7CC81F005FFFB5 /* TeacherSettingsViewController.m */; };
 		90D8162B1C14798F00E69C97 /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8160E1C14798F00E69C97 /* CommonFunction.m */; };
 		90D8162C1C14798F00E69C97 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816101C14798F00E69C97 /* Constants.m */; };
 		90D8162D1C14798F00E69C97 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816121C14798F00E69C97 /* DBManager.m */; };
 		90D8162E1C14798F00E69C97 /* FontIconMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816141C14798F00E69C97 /* FontIconMapping.m */; };
 		90D8162F1C14798F00E69C97 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816161C14798F00E69C97 /* APIManager.m */; };
-		90D816301C14798F00E69C97 /* SCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816181C14798F00E69C97 /* SCollectionViewCell.m */; };
-		90D816311C14798F00E69C97 /* SDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8161A1C14798F00E69C97 /* SDialogViewController.m */; };
 		90D816331C14798F00E69C97 /* ImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8161E1C14798F00E69C97 /* ImagePrefetcher.m */; };
-		90D816341C14798F00E69C97 /* SlingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816201C14798F00E69C97 /* SlingObject.m */; };
+		90D816341C14798F00E69C97 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816201C14798F00E69C97 /* BaseObject.m */; };
 		90D816351C14798F00E69C97 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816221C14798F00E69C97 /* SettingsManager.m */; };
 		90D816361C14798F00E69C97 /* STableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816241C14798F00E69C97 /* STableViewCell.m */; };
 		90D816371C14798F00E69C97 /* NSCustomError.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816261C14798F00E69C97 /* NSCustomError.m */; };
 		90D816381C14798F00E69C97 /* UIImageView+CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816281C14798F00E69C97 /* UIImageView+CommonFunction.m */; };
 		90D816391C14798F00E69C97 /* UILabelCustomStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8162A1C14798F00E69C97 /* UILabelCustomStyle.m */; };
-		90D8163C1C147A3C00E69C97 /* SlingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8163B1C147A3C00E69C97 /* SlingViewController.m */; };
+		90D8163C1C147A3C00E69C97 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8163B1C147A3C00E69C97 /* BaseViewController.m */; };
 		90D816471C147BA600E69C97 /* ImageSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8163E1C147BA600E69C97 /* ImageSlider.m */; };
 		90D816481C147BA600E69C97 /* LocalNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816401C147BA600E69C97 /* LocalNotificationView.m */; };
 		90D816491C147BA600E69C97 /* NavigationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816421C147BA600E69C97 /* NavigationHeaderView.m */; };
@@ -42,6 +56,8 @@
 		90D816791C147E6200E69C97 /* Appirater.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 90D816771C147E6200E69C97 /* Appirater.podspec.json */; };
 		90D8167D1C158DF900E69C97 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8167C1C158DF900E69C97 /* Notification.m */; };
 		90D816811C15938900E69C97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90D816831C15938900E69C97 /* Localizable.strings */; };
+		90E6D0581C7CCD0E00D64CB9 /* SlingUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6D0571C7CCD0E00D64CB9 /* SlingUser.m */; };
+		90E6D05A1C7CCED800D64CB9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E6D0591C7CCED800D64CB9 /* Default-568h@2x.png */; };
 		A8F00A49C742E048DCE53DBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C5AD534F037E03E6269EA2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,10 +67,42 @@
 		9050AC921C14123700CEB7AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9050AC941C14123700CEB7AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9050AC951C14123700CEB7AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9050AC971C14123700CEB7AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9050AC981C14123700CEB7AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9050AC9D1C14123700CEB7AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9050ACA21C14123700CEB7AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		907E84041C7CC7CD005FFFB5 /* ClassNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassNumber.h; path = Models/ClassNumber.h; sourceTree = "<group>"; };
+		907E84051C7CC7CD005FFFB5 /* ClassNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassNumber.m; path = Models/ClassNumber.m; sourceTree = "<group>"; };
+		907E84061C7CC7CD005FFFB5 /* NoticeBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoticeBoard.h; path = Models/NoticeBoard.h; sourceTree = "<group>"; };
+		907E84071C7CC7CD005FFFB5 /* NoticeBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoticeBoard.m; path = Models/NoticeBoard.m; sourceTree = "<group>"; };
+		907E84081C7CC7CD005FFFB5 /* Parent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Parent.h; path = Models/Parent.h; sourceTree = "<group>"; };
+		907E84091C7CC7CD005FFFB5 /* Parent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Parent.m; path = Models/Parent.m; sourceTree = "<group>"; };
+		907E840A1C7CC7CD005FFFB5 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Review.h; path = Models/Review.h; sourceTree = "<group>"; };
+		907E840B1C7CC7CD005FFFB5 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Review.m; path = Models/Review.m; sourceTree = "<group>"; };
+		907E840C1C7CC7CD005FFFB5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = Models/Student.h; sourceTree = "<group>"; };
+		907E840D1C7CC7CD005FFFB5 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = Models/Student.m; sourceTree = "<group>"; };
+		907E840E1C7CC7CD005FFFB5 /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Teacher.h; path = Models/Teacher.h; sourceTree = "<group>"; };
+		907E840F1C7CC7CD005FFFB5 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Teacher.m; path = Models/Teacher.m; sourceTree = "<group>"; };
+		907E84101C7CC7CD005FFFB5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Models/User.h; sourceTree = "<group>"; };
+		907E84111C7CC7CD005FFFB5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Models/User.m; sourceTree = "<group>"; };
+		907E841B1C7CC7EC005FFFB5 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseNavigationController.h; path = "View Controllers/BaseNavigationController.h"; sourceTree = "<group>"; };
+		907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNavigationController.m; path = "View Controllers/BaseNavigationController.m"; sourceTree = "<group>"; };
+		907E841E1C7CC802005FFFB5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = "View Controllers/LoginViewController.h"; sourceTree = "<group>"; };
+		907E841F1C7CC802005FFFB5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = "View Controllers/LoginViewController.m"; sourceTree = "<group>"; };
+		907E84211C7CC814005FFFB5 /* ParentChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentChatViewController.h; path = "View Controllers/ParentChatViewController.h"; sourceTree = "<group>"; };
+		907E84221C7CC814005FFFB5 /* ParentChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentChatViewController.m; path = "View Controllers/ParentChatViewController.m"; sourceTree = "<group>"; };
+		907E84231C7CC814005FFFB5 /* ParentNoticeBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentNoticeBoardViewController.h; path = "View Controllers/ParentNoticeBoardViewController.h"; sourceTree = "<group>"; };
+		907E84241C7CC814005FFFB5 /* ParentNoticeBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentNoticeBoardViewController.m; path = "View Controllers/ParentNoticeBoardViewController.m"; sourceTree = "<group>"; };
+		907E84251C7CC814005FFFB5 /* ParentReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentReviewViewController.h; path = "View Controllers/ParentReviewViewController.h"; sourceTree = "<group>"; };
+		907E84261C7CC814005FFFB5 /* ParentReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentReviewViewController.m; path = "View Controllers/ParentReviewViewController.m"; sourceTree = "<group>"; };
+		907E84271C7CC814005FFFB5 /* ParentSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentSettingsViewController.h; path = "View Controllers/ParentSettingsViewController.h"; sourceTree = "<group>"; };
+		907E84281C7CC814005FFFB5 /* ParentSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentSettingsViewController.m; path = "View Controllers/ParentSettingsViewController.m"; sourceTree = "<group>"; };
+		907E842D1C7CC81F005FFFB5 /* TeacherChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherChatViewController.h; path = "View Controllers/TeacherChatViewController.h"; sourceTree = "<group>"; };
+		907E842E1C7CC81F005FFFB5 /* TeacherChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherChatViewController.m; path = "View Controllers/TeacherChatViewController.m"; sourceTree = "<group>"; };
+		907E842F1C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherNoticeBoardViewController.h; path = "View Controllers/TeacherNoticeBoardViewController.h"; sourceTree = "<group>"; };
+		907E84301C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherNoticeBoardViewController.m; path = "View Controllers/TeacherNoticeBoardViewController.m"; sourceTree = "<group>"; };
+		907E84311C7CC81F005FFFB5 /* TeacherReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherReviewViewController.h; path = "View Controllers/TeacherReviewViewController.h"; sourceTree = "<group>"; };
+		907E84321C7CC81F005FFFB5 /* TeacherReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherReviewViewController.m; path = "View Controllers/TeacherReviewViewController.m"; sourceTree = "<group>"; };
+		907E84331C7CC81F005FFFB5 /* TeacherSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherSettingsViewController.h; path = "View Controllers/TeacherSettingsViewController.h"; sourceTree = "<group>"; };
+		907E84341C7CC81F005FFFB5 /* TeacherSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherSettingsViewController.m; path = "View Controllers/TeacherSettingsViewController.m"; sourceTree = "<group>"; };
 		90D8160D1C14798F00E69C97 /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonFunction.h; path = Utils/CommonFunction.h; sourceTree = "<group>"; };
 		90D8160E1C14798F00E69C97 /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonFunction.m; path = Utils/CommonFunction.m; sourceTree = "<group>"; };
 		90D8160F1C14798F00E69C97 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utils/Constants.h; sourceTree = "<group>"; };
@@ -65,14 +113,10 @@
 		90D816141C14798F00E69C97 /* FontIconMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FontIconMapping.m; path = Utils/FontIconMapping.m; sourceTree = "<group>"; };
 		90D816151C14798F00E69C97 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIManager.h; path = Utils/APIManager.h; sourceTree = "<group>"; };
 		90D816161C14798F00E69C97 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIManager.m; path = Utils/APIManager.m; sourceTree = "<group>"; };
-		90D816171C14798F00E69C97 /* SCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCollectionViewCell.h; path = Utils/SCollectionViewCell.h; sourceTree = "<group>"; };
-		90D816181C14798F00E69C97 /* SCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCollectionViewCell.m; path = Utils/SCollectionViewCell.m; sourceTree = "<group>"; };
-		90D816191C14798F00E69C97 /* SDialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDialogViewController.h; path = Utils/SDialogViewController.h; sourceTree = "<group>"; };
-		90D8161A1C14798F00E69C97 /* SDialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDialogViewController.m; path = Utils/SDialogViewController.m; sourceTree = "<group>"; };
 		90D8161D1C14798F00E69C97 /* ImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagePrefetcher.h; path = Utils/ImagePrefetcher.h; sourceTree = "<group>"; };
 		90D8161E1C14798F00E69C97 /* ImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagePrefetcher.m; path = Utils/ImagePrefetcher.m; sourceTree = "<group>"; };
-		90D8161F1C14798F00E69C97 /* SlingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlingObject.h; path = Utils/SlingObject.h; sourceTree = "<group>"; };
-		90D816201C14798F00E69C97 /* SlingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlingObject.m; path = Utils/SlingObject.m; sourceTree = "<group>"; };
+		90D8161F1C14798F00E69C97 /* BaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseObject.h; path = Utils/BaseObject.h; sourceTree = "<group>"; };
+		90D816201C14798F00E69C97 /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseObject.m; path = Utils/BaseObject.m; sourceTree = "<group>"; };
 		90D816211C14798F00E69C97 /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsManager.h; path = Utils/SettingsManager.h; sourceTree = "<group>"; };
 		90D816221C14798F00E69C97 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Utils/SettingsManager.m; sourceTree = "<group>"; };
 		90D816231C14798F00E69C97 /* STableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STableViewCell.h; path = Utils/STableViewCell.h; sourceTree = "<group>"; };
@@ -83,8 +127,8 @@
 		90D816281C14798F00E69C97 /* UIImageView+CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+CommonFunction.m"; path = "Utils/UIImageView+CommonFunction.m"; sourceTree = "<group>"; };
 		90D816291C14798F00E69C97 /* UILabelCustomStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UILabelCustomStyle.h; path = Utils/UILabelCustomStyle.h; sourceTree = "<group>"; };
 		90D8162A1C14798F00E69C97 /* UILabelCustomStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UILabelCustomStyle.m; path = Utils/UILabelCustomStyle.m; sourceTree = "<group>"; };
-		90D8163A1C147A3C00E69C97 /* SlingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlingViewController.h; path = "View Controllers/SlingViewController.h"; sourceTree = "<group>"; };
-		90D8163B1C147A3C00E69C97 /* SlingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlingViewController.m; path = "View Controllers/SlingViewController.m"; sourceTree = "<group>"; };
+		90D8163A1C147A3C00E69C97 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = "View Controllers/BaseViewController.h"; sourceTree = "<group>"; };
+		90D8163B1C147A3C00E69C97 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = "View Controllers/BaseViewController.m"; sourceTree = "<group>"; };
 		90D8163D1C147BA600E69C97 /* ImageSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSlider.h; path = "Custom Views/ImageSlider.h"; sourceTree = "<group>"; };
 		90D8163E1C147BA600E69C97 /* ImageSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageSlider.m; path = "Custom Views/ImageSlider.m"; sourceTree = "<group>"; };
 		90D8163F1C147BA600E69C97 /* LocalNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalNotificationView.h; path = "Custom Views/LocalNotificationView.h"; sourceTree = "<group>"; };
@@ -119,6 +163,9 @@
 		90D8167B1C158DF900E69C97 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Notification.h; path = Models/Notification.h; sourceTree = "<group>"; };
 		90D8167C1C158DF900E69C97 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Notification.m; path = Models/Notification.m; sourceTree = "<group>"; };
 		90D816841C15938D00E69C97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		90E6D0561C7CCD0E00D64CB9 /* SlingUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlingUser.h; path = Sling/Utils/SlingUser.h; sourceTree = SOURCE_ROOT; };
+		90E6D0571C7CCD0E00D64CB9 /* SlingUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlingUser.m; path = Sling/Utils/SlingUser.m; sourceTree = SOURCE_ROOT; };
+		90E6D0591C7CCED800D64CB9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CB62666A8AC424B18BEE7109 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FCF4A359F45AACFB58CA44C7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +185,7 @@
 		9050AC851C14123700CEB7AE = {
 			isa = PBXGroup;
 			children = (
+				90E6D0591C7CCED800D64CB9 /* Default-568h@2x.png */,
 				9050AC901C14123700CEB7AE /* Sling */,
 				9050AC8F1C14123700CEB7AE /* Products */,
 				B884CF125C5A7A311486D550 /* Pods */,
@@ -166,8 +214,6 @@
 				90D816051C141FEE00E69C97 /* API */,
 				9050AC941C14123700CEB7AE /* AppDelegate.h */,
 				9050AC951C14123700CEB7AE /* AppDelegate.m */,
-				9050AC971C14123700CEB7AE /* ViewController.h */,
-				9050AC981C14123700CEB7AE /* ViewController.m */,
 				9050AC9D1C14123700CEB7AE /* Assets.xcassets */,
 				9050ACA21C14123700CEB7AE /* Info.plist */,
 				9050AC911C14123700CEB7AE /* Supporting Files */,
@@ -183,6 +229,36 @@
 				9050AC921C14123700CEB7AE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		907E84191C7CC7D9005FFFB5 /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+				907E842D1C7CC81F005FFFB5 /* TeacherChatViewController.h */,
+				907E842E1C7CC81F005FFFB5 /* TeacherChatViewController.m */,
+				907E842F1C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.h */,
+				907E84301C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m */,
+				907E84311C7CC81F005FFFB5 /* TeacherReviewViewController.h */,
+				907E84321C7CC81F005FFFB5 /* TeacherReviewViewController.m */,
+				907E84331C7CC81F005FFFB5 /* TeacherSettingsViewController.h */,
+				907E84341C7CC81F005FFFB5 /* TeacherSettingsViewController.m */,
+			);
+			name = Teacher;
+			sourceTree = "<group>";
+		};
+		907E841A1C7CC7DE005FFFB5 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				907E84211C7CC814005FFFB5 /* ParentChatViewController.h */,
+				907E84221C7CC814005FFFB5 /* ParentChatViewController.m */,
+				907E84231C7CC814005FFFB5 /* ParentNoticeBoardViewController.h */,
+				907E84241C7CC814005FFFB5 /* ParentNoticeBoardViewController.m */,
+				907E84251C7CC814005FFFB5 /* ParentReviewViewController.h */,
+				907E84261C7CC814005FFFB5 /* ParentReviewViewController.m */,
+				907E84271C7CC814005FFFB5 /* ParentSettingsViewController.h */,
+				907E84281C7CC814005FFFB5 /* ParentSettingsViewController.m */,
+			);
+			name = Parent;
 			sourceTree = "<group>";
 		};
 		90D816051C141FEE00E69C97 /* API */ = {
@@ -231,6 +307,23 @@
 		90D8160A1C14202100E69C97 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				90E6D0551C7CCCC200D64CB9 /* Class */,
+				90E6D0541C7CCCBC00D64CB9 /* Parent */,
+				90E6D0531C7CCCB700D64CB9 /* Teacher */,
+				907E84041C7CC7CD005FFFB5 /* ClassNumber.h */,
+				907E84051C7CC7CD005FFFB5 /* ClassNumber.m */,
+				907E84061C7CC7CD005FFFB5 /* NoticeBoard.h */,
+				907E84071C7CC7CD005FFFB5 /* NoticeBoard.m */,
+				907E84081C7CC7CD005FFFB5 /* Parent.h */,
+				907E84091C7CC7CD005FFFB5 /* Parent.m */,
+				907E840A1C7CC7CD005FFFB5 /* Review.h */,
+				907E840B1C7CC7CD005FFFB5 /* Review.m */,
+				907E840C1C7CC7CD005FFFB5 /* Student.h */,
+				907E840D1C7CC7CD005FFFB5 /* Student.m */,
+				907E840E1C7CC7CD005FFFB5 /* Teacher.h */,
+				907E840F1C7CC7CD005FFFB5 /* Teacher.m */,
+				907E84101C7CC7CD005FFFB5 /* User.h */,
+				907E84111C7CC7CD005FFFB5 /* User.m */,
 				90D8167B1C158DF900E69C97 /* Notification.h */,
 				90D8167C1C158DF900E69C97 /* Notification.m */,
 			);
@@ -240,8 +333,14 @@
 		90D8160B1C14202400E69C97 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				90D8163A1C147A3C00E69C97 /* SlingViewController.h */,
-				90D8163B1C147A3C00E69C97 /* SlingViewController.m */,
+				907E841E1C7CC802005FFFB5 /* LoginViewController.h */,
+				907E841F1C7CC802005FFFB5 /* LoginViewController.m */,
+				907E841B1C7CC7EC005FFFB5 /* BaseNavigationController.h */,
+				907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */,
+				907E841A1C7CC7DE005FFFB5 /* Parent */,
+				907E84191C7CC7D9005FFFB5 /* Teacher */,
+				90D8163A1C147A3C00E69C97 /* BaseViewController.h */,
+				90D8163B1C147A3C00E69C97 /* BaseViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -259,14 +358,10 @@
 				90D816141C14798F00E69C97 /* FontIconMapping.m */,
 				90D816151C14798F00E69C97 /* APIManager.h */,
 				90D816161C14798F00E69C97 /* APIManager.m */,
-				90D816171C14798F00E69C97 /* SCollectionViewCell.h */,
-				90D816181C14798F00E69C97 /* SCollectionViewCell.m */,
-				90D816191C14798F00E69C97 /* SDialogViewController.h */,
-				90D8161A1C14798F00E69C97 /* SDialogViewController.m */,
 				90D8161D1C14798F00E69C97 /* ImagePrefetcher.h */,
 				90D8161E1C14798F00E69C97 /* ImagePrefetcher.m */,
-				90D8161F1C14798F00E69C97 /* SlingObject.h */,
-				90D816201C14798F00E69C97 /* SlingObject.m */,
+				90D8161F1C14798F00E69C97 /* BaseObject.h */,
+				90D816201C14798F00E69C97 /* BaseObject.m */,
 				90D816211C14798F00E69C97 /* SettingsManager.h */,
 				90D816221C14798F00E69C97 /* SettingsManager.m */,
 				90D816231C14798F00E69C97 /* STableViewCell.h */,
@@ -277,6 +372,8 @@
 				90D816281C14798F00E69C97 /* UIImageView+CommonFunction.m */,
 				90D816291C14798F00E69C97 /* UILabelCustomStyle.h */,
 				90D8162A1C14798F00E69C97 /* UILabelCustomStyle.m */,
+				90E6D0561C7CCD0E00D64CB9 /* SlingUser.h */,
+				90E6D0571C7CCD0E00D64CB9 /* SlingUser.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -342,6 +439,27 @@
 				90D816831C15938900E69C97 /* Localizable.strings */,
 			);
 			name = Localizable;
+			sourceTree = "<group>";
+		};
+		90E6D0531C7CCCB700D64CB9 /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Teacher;
+			sourceTree = "<group>";
+		};
+		90E6D0541C7CCCBC00D64CB9 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Parent;
+			sourceTree = "<group>";
+		};
+		90E6D0551C7CCCC200D64CB9 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Class;
 			sourceTree = "<group>";
 		};
 		B884CF125C5A7A311486D550 /* Pods */ = {
@@ -422,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9050AC9E1C14123700CEB7AE /* Assets.xcassets in Resources */,
+				90E6D05A1C7CCED800D64CB9 /* Default-568h@2x.png in Resources */,
 				90D816811C15938900E69C97 /* Localizable.strings in Resources */,
 				90D816791C147E6200E69C97 /* Appirater.podspec.json in Resources */,
 			);
@@ -482,35 +601,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E6D0581C7CCD0E00D64CB9 /* SlingUser.m in Sources */,
 				90D816371C14798F00E69C97 /* NSCustomError.m in Sources */,
 				90D816661C147E0600E69C97 /* RavenClient.m in Sources */,
 				90D816391C14798F00E69C97 /* UILabelCustomStyle.m in Sources */,
 				90D8162C1C14798F00E69C97 /* Constants.m in Sources */,
+				907E841D1C7CC7EC005FFFB5 /* BaseNavigationController.m in Sources */,
+				907E84131C7CC7CD005FFFB5 /* NoticeBoard.m in Sources */,
 				90D8166E1C147E1000E69C97 /* JVFloatLabeledTextField.m in Sources */,
-				9050AC991C14123700CEB7AE /* ViewController.m in Sources */,
-				90D816311C14798F00E69C97 /* SDialogViewController.m in Sources */,
+				907E84351C7CC81F005FFFB5 /* TeacherChatViewController.m in Sources */,
 				90D816331C14798F00E69C97 /* ImagePrefetcher.m in Sources */,
+				907E84381C7CC81F005FFFB5 /* TeacherSettingsViewController.m in Sources */,
 				90D816701C147E1000E69C97 /* NSString+TextDirectionality.m in Sources */,
 				90D8164A1C147BA600E69C97 /* UIDashedLine.m in Sources */,
 				90D8162E1C14798F00E69C97 /* FontIconMapping.m in Sources */,
+				907E842C1C7CC814005FFFB5 /* ParentSettingsViewController.m in Sources */,
 				9050AC961C14123700CEB7AE /* AppDelegate.m in Sources */,
 				90D816381C14798F00E69C97 /* UIImageView+CommonFunction.m in Sources */,
+				907E84141C7CC7CD005FFFB5 /* Parent.m in Sources */,
 				90D816761C147E3100E69C97 /* Appirater.m in Sources */,
 				90D8167D1C158DF900E69C97 /* Notification.m in Sources */,
 				90D816731C147E1B00E69C97 /* FXBlurView.m in Sources */,
+				907E84201C7CC802005FFFB5 /* LoginViewController.m in Sources */,
 				90D816471C147BA600E69C97 /* ImageSlider.m in Sources */,
 				90D8165F1C147DFB00E69C97 /* UICountingLabel.m in Sources */,
+				907E842B1C7CC814005FFFB5 /* ParentReviewViewController.m in Sources */,
 				90D8166F1C147E1000E69C97 /* JVFloatLabeledTextView.m in Sources */,
 				90D8162F1C14798F00E69C97 /* APIManager.m in Sources */,
+				907E84161C7CC7CD005FFFB5 /* Student.m in Sources */,
 				90D8164B1C147BA600E69C97 /* UILabel+CustomStyle.m in Sources */,
+				907E84291C7CC814005FFFB5 /* ParentChatViewController.m in Sources */,
 				90D8162D1C14798F00E69C97 /* DBManager.m in Sources */,
 				90D8162B1C14798F00E69C97 /* CommonFunction.m in Sources */,
+				907E84181C7CC7CD005FFFB5 /* User.m in Sources */,
 				90D816671C147E0600E69C97 /* RavenConfig.m in Sources */,
-				90D816301C14798F00E69C97 /* SCollectionViewCell.m in Sources */,
 				90D816481C147BA600E69C97 /* LocalNotificationView.m in Sources */,
-				90D816341C14798F00E69C97 /* SlingObject.m in Sources */,
-				90D8163C1C147A3C00E69C97 /* SlingViewController.m in Sources */,
+				907E842A1C7CC814005FFFB5 /* ParentNoticeBoardViewController.m in Sources */,
+				907E84371C7CC81F005FFFB5 /* TeacherReviewViewController.m in Sources */,
+				907E84361C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m in Sources */,
+				90D816341C14798F00E69C97 /* BaseObject.m in Sources */,
+				907E84171C7CC7CD005FFFB5 /* Teacher.m in Sources */,
+				907E84151C7CC7CD005FFFB5 /* Review.m in Sources */,
+				90D8163C1C147A3C00E69C97 /* BaseViewController.m in Sources */,
 				90D816361C14798F00E69C97 /* STableViewCell.m in Sources */,
+				907E84121C7CC7CD005FFFB5 /* ClassNumber.m in Sources */,
 				90D816351C14798F00E69C97 /* SettingsManager.m in Sources */,
 				9050AC931C14123700CEB7AE /* main.m in Sources */,
 				90D816491C147BA600E69C97 /* NavigationHeaderView.m in Sources */,
@@ -619,7 +753,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sling/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bitstax.sling;
 				PRODUCT_NAME = Sling.temp_caseinsensitive_rename;
@@ -634,7 +768,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sling/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bitstax.sling;
 				PRODUCT_NAME = Sling.temp_caseinsensitive_rename;

@@ -11,6 +11,18 @@
 #import <sys/utsname.h>
 #import "APIManager.h"
 
+#import "LoginViewController.h"
+
+#import "ParentChatViewController.h"
+#import "ParentNoticeBoardViewController.h"
+#import "ParentReviewViewController.h"
+#import "ParentSettingsViewController.h"
+
+#import "TeacherChatViewController.h"
+#import "TeacherNoticeBoardViewController.h"
+#import "TeacherReviewViewController.h"
+#import "TeacherSettingsViewController.h"
+
 @implementation CommonFunction
 
 +(void) printMethodTrace
@@ -296,53 +308,49 @@ static NSString *urlEncode(id object)
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
 }
 
-+ (void) logApiwith:(NSString *) errorString additionalExtra:(NSDictionary *)additionalExtra
+#pragma mark - NSUserDefaults
+
++ (void) setUserLoggedIn
 {
-    NSLog(@"Error\n%@,\nAdditional\n%@",errorString,additionalExtra);
-    [[RavenClient sharedClient] captureMessage:errorString level:kRavenLogLevelDebugError additionalExtra:additionalExtra additionalTags:nil method:nil file:nil line:0 sendNow:YES];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:USER_LOGGED_IN];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_USER_LOGGED_IN object:nil];
 }
 
-+ (void) logApiwithError:(NSError *)error
++ (void) setUserLoggedOut
 {
-    @try
-    {
-        if (error)
-        {
-            NSLog(@"Error -> %@",error);
-            RavenCaptureError(error);
-        }
-    }
-    @catch (NSException* exception)
-    {
-    }
+    //[CommonFunction deleteGroferUser];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:USER_LOGGED_IN];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_USER_LOGGED_OUT object:nil];
 }
 
-+ (void) writeLogToFile:(NSString *) string
++ (BOOL) isUserLoggedIn
 {
-    //CREATE FILE
-    NSError *error;
-    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"fileArray.txt"];
-    NSLog(@"string to write:%@",string);
-    // Write to the file
-    [string writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:USER_LOGGED_IN];
 }
 
-#pragma User Login
-
-+ (void) updateApiManagerHeaders
++ (void) logOutUser
 {
-    NSDictionary *headersDictionary = [APIManager defaultHeaders];
+    // Save Device Token For Next Login
+    //NSString *deviceToken = [[GroferUser sharedUser] deviceToken];
     
-    for (id key in [headersDictionary allKeys])
-    {
-        [[[[APIManager sharedManager] apiManager] requestSerializer] setValue:[headersDictionary objectForKey:key] forHTTPHeaderField:key];
-    }
+    //[CommonFunction deleteGroferUser];
+    [CommonFunction setUserLoggedOut];
 }
 
-// Navigation Controller
 
-+ (UINavigationController *) getNavigationController:(UIViewController*) vc
+#pragma mark - UIViewControllers
+
++ (UIViewController *) getLoginViewController
+{
+    LoginViewController *controller = [[LoginViewController alloc] init];
+    return [CommonFunction getNavigationControllerForViewController:controller];
+}
+
+#pragma mark -  Navigation Controller
+
++ (UINavigationController *) getNavigationControllerForViewController:(UIViewController*) vc
 {
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     [navigationController setNavigationBarHidden:NO];
@@ -357,7 +365,7 @@ static NSString *urlEncode(id object)
     return navigationController;
 }
 
-#pragma Size Related
+#pragma mark - Size Related
 
 +(NSString*) deviceName
 {

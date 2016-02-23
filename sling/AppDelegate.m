@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "CommonFunction.h"
+
 @interface AppDelegate ()
 
 @end
@@ -18,59 +19,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSLog(@"-------------------\n%@",launchOptions);
-    
-    // Setup Inital Parameters
-    //[self setupInitalParameters];
-    
-    // Setup Configuration
-    //[Configuration sharedConfiguration];
-    
-    // Setting Crashlytics
-    //[self setupCrashlytics];
-    
-    // Setting Sentry
-    //RavenClient *client = [RavenClient clientWithDSN:SENTRY_API_KEY];
-    //[RavenClient setSharedClient:client];
-    
-    // Setting Database
-    //[self setUpDatabase];
-    
-    // Register In App Notifications
-    //[self registerForInAppNotifications];
-    
-    // Setting Appirater
-    //[self setAppiraterValues];
-    
-    
-    // Setting Up UI
-    //[SVProgressHUD setForegroundColor:UIColorFromRGB(GROFERS_ORANGE)];
-    
-    // Override point for customization after application launch.
-    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    if(launchOptions != nil)
-    {
-        NSDictionary *dictionary = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-        
-        if (dictionary != nil)
-        {
-            NSLog(@"============>Opened from notification<============");
-        }
-    }
-    else
-    {
-        NSLog(@"============>Opened normally<============");
-        [self startFirstActivity];
-    }
+    [self startFirstActivity];
     
     return YES;
 }
 
 -(void) startFirstActivity
 {
-    ViewController *controller = [[ViewController alloc] init];
-    [window setRootViewController:controller];
+    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    if ([CommonFunction isUserLoggedIn])
+    {
+        
+    }
+    else
+    {
+        [window setRootViewController:[CommonFunction getLoginViewController]];
+    }
+    
     [window makeKeyAndVisible];
 }
 

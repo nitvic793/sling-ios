@@ -10,7 +10,7 @@
 #import "CommonFunction.h"
 #import "UIViewController+ScrollingNavbar.h"
 
-@interface SlingViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface BaseViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) NSString *screenName;
 

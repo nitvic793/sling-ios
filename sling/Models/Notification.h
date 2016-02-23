@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 GroferIt. All rights reserved.
 //
 
-#import "SlingObject.h"
+#import "BaseObject.h"
 
 typedef NS_ENUM(NSUInteger, NotificationType)
 {
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger, LandingPageType)
     LandingPageTypeNone
 };
 
-@interface Notification : SlingObject
+@interface Notification : BaseObject
 
 @property (nonatomic,strong) NSNumber *unique_id;
 @property (nonatomic,strong) NSString *title;

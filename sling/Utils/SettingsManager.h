@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 GroferIt. All rights reserved.
 //
 
-#import "SlingObject.h"
+#import "BaseObject.h"
 
-@interface SettingsManager : SlingObject
+@interface SettingsManager : BaseObject
 
 + (SettingsManager *)sharedManager;
 

@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 GroferIt. All rights reserved.
 //
 
-#import "SlingViewController.h"
+#import "BaseViewController.h"
 #import "Constants.h"
 #import "AppDelegate.h"
 
-@implementation SlingViewController
+@implementation BaseViewController
 
 - (id) init
 {

@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "ImagePrefetcher.h"
 
-@interface SlingObject : NSObject
+@interface BaseObject : NSObject
 
 @property (nonatomic, strong) NSNumber* gid;
 
-- (BOOL) isObjectWithSameGid : (SlingObject *) gObject;
+- (BOOL) isObjectWithSameGid : (BaseObject *) gObject;
 
 
 + (NSInteger) getRetryCount;

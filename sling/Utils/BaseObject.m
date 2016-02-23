@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 GroferIt. All rights reserved.
 //
 
-#import "SlingObject.h"
+#import "BaseObject.h"
 
-@implementation SlingObject
+@implementation BaseObject
 
-- (BOOL) isObjectWithSameGid : (SlingObject *) gObject;
+- (BOOL) isObjectWithSameGid : (BaseObject *) gObject;
 {
     if(gObject.gid == Nil || self.gid == Nil)
     {

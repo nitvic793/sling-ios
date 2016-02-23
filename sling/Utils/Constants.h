@@ -29,8 +29,8 @@ static NSString *HTTP_DELETE = @"DELETE";
 //********************API***********************
 
 #define API_RETRY_COUNT 3
-#define API_LIVE_URL @"api.grofers.com"
-#define API_STAGE_URL @"stage.grofer.in"
+#define API_LIVE_URL @"sling-server.herokuapp.com"
+#define API_STAGE_URL @"sling-server.herokuapp.com"
 
 
 #define API_NA @"-NA-"
@@ -125,7 +125,7 @@ static NSString *HTTP_DELETE = @"DELETE";
 #define USER_IS_ADMIN   @"user_is_admin"
 #define ACCESS_TOKEN    @"access_token"
 #define AUTH_TOKEN      @"auth_token"
-#define GROFER_USER     @"grofer_user"
+#define SLING_USER      @"sling_user"
 #define USER_LATITUDE   @"latitude"
 #define USER_LONGITUDE  @"longitude"
 #define USER_LOCATION   @"location"

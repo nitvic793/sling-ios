@@ -57,15 +57,6 @@
                                 andSuccessBlock:(GOperationCompletionBlock)successBlock
                                 andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 
-- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
-                                      andMethod:(NSString *)method
-                                     andHeaders:(NSDictionary *)headers
-                                      andParams:(NSDictionary *)params
-                                        andBody:(NSData *)body
-                                      andNewAPi:(BOOL) isNewApi
-                                andSuccessBlock:(GOperationCompletionBlock)successBlock
-                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
-
 #pragma mark - Absolute URL ( JSON / HTML )
 
 - (NSURLSessionDataTask *) requestForURL:(NSString*) url

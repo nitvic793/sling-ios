@@ -8,7 +8,7 @@
 
 #import "APIManager.h"
 #import "Constants.h"
-#import "SlingObject.h"
+#import "BaseObject.h"
 #import "CommonFunction.h"
 
 typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSError *error);
@@ -70,7 +70,7 @@ typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSEr
                                 andSuccessBlock:(GOperationCompletionBlock)successBlock
                                 andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
 {
-    return [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andNewAPi:NO andSuccessBlock:successBlock andFailureBlock:failureBlock];
+    return [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andSuccessBlock:successBlock andFailureBlock:failureBlock];
 }
 
 - (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
@@ -80,7 +80,7 @@ typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSEr
                                 andSuccessBlock:(GOperationCompletionBlock)successBlock
                                 andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
 {
-    return [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andNewAPi:isNewApi andSuccessBlock:successBlock andFailureBlock:failureBlock];
+    return [self sendOperationForClass:klass andMethod:method andHeaders:nil andParams:params andBody:nil andSuccessBlock:successBlock andFailureBlock:failureBlock];
 }
 
 - (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
@@ -90,18 +90,6 @@ typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSEr
                                         andBody:(NSData *)body
                                 andSuccessBlock:(GOperationCompletionBlock)successBlock
                                 andFailureBlock:(SimpleErrorCompletionBlock)failureBlock
-{
-    return [self sendOperationForClass:klass andMethod:method andHeaders:headers andParams:params andBody:body andNewAPi:NO andSuccessBlock:successBlock andFailureBlock:failureBlock];
-}
-
-- (NSURLSessionDataTask *)sendOperationForClass:(Class)klass
-                                      andMethod:(NSString *)method
-                                     andHeaders:(NSDictionary *)headers
-                                      andParams:(NSDictionary *)params
-                                        andBody:(NSData *)body
-                                      andNewAPi:(BOOL) isNewApi
-                                andSuccessBlock:(GOperationCompletionBlock)successBlock
-                                andFailureBlock:(SimpleErrorCompletionBlock)failureBlock;
 {
     NSMutableDictionary *requestParams = [[NSMutableDictionary alloc] init];
     //avoiding request params to keep a strong reference of the objects of the params dictionary
@@ -117,24 +105,7 @@ typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSEr
             
             failureBlock([[NSCustomError alloc] initWithError:error]);
         } else {
-            if(isNewApi) {
-                successBlock(responseObject);
-            } else {
-                NSNumber *isSuccess = [responseObject valueForKey:@"success"];
-                
-                if([isSuccess intValue] == 1) {
-                    successBlock(responseObject);
-                } else
-                {
-                    // Log success false in Sentry
-                    NSString *message = [responseObject objectForKey:@"message"];
-                    NSMutableDictionary *additonalDict = [self apiDictToLogWithClass:klass WithParameters:params];
-                    [additonalDict setValue:method forKey:REQUEST_METHOD];
-                    [CommonFunction logApiwith:message additionalExtra:additonalDict];
-                    
-                    failureBlock([[NSCustomError alloc] initWithRequestSuccessFalseErrorWithStatusCode:@"" andMessage:message]);
-                }
-            }
+            successBlock(responseObject);
         }
     };
     

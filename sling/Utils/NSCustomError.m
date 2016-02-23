@@ -59,7 +59,7 @@
         
         if(server_error && error)
         {
-            [CommonFunction logApiwithError:error];
+            //[CommonFunction logApiwithError:error];
         }
         
         if (code == kCFURLErrorCancelled)

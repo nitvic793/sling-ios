@@ -16,7 +16,7 @@
 #import "Appirater.h"
 #import "DBManager.h"
 #import "Constants.h"
-
+#import "SlingUser.h"
 #import "UIImageView+CommonFunction.h"
 
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
@@ -91,17 +91,37 @@ typedef NS_ENUM(NSUInteger, iPhone) {
 
 + (void) openAppStore;
 
-+ (void) logApiwith:(NSString *) errorString additionalExtra:(NSDictionary *)additionalExtra;
-
-+ (void) logApiwithError:(NSError *)error;
-
-+ (void) writeLogToFile:(NSString *) string;
-
-+ (void) updateApiManagerHeaders;
-
 + (NSString*) getQueryStringFromDictionary: (NSDictionary *) dictionary;
 
-// UIVIEWS
+#pragma mark - NSUserDefaults
+
++ (void) setUserLoggedIn;
+
++ (void) setUserLoggedOut;
+
++ (BOOL) isUserLoggedIn;
+
++ (void) logOutUser;
+
+
+#pragma mark - UIViewController
+
++ (UINavigationController *) getNavigationControllerForViewController:(UIViewController *)viewController;
+
++ (UIViewController *) getLoginViewController;
+
++ (UIViewController *) getParentChatViewController;
++ (UIViewController *) getParentNoticeBoardViewController;
++ (UIViewController *) getParentReviewViewController;
++ (UIViewController *) getParentSettingsViewController;
+
++ (UIViewController *) getTeacherChatViewController;
++ (UIViewController *) getTeacherNoticeBoardViewController;
++ (UIViewController *) getTeacherReviewViewController;
++ (UIViewController *) getTeacherSettingsViewController;
+
+
+#pragma mark -  UIVIEWS
 
 + (void)shake:(UIView *)view withShakes:(int)shakes inDirection:(float)direction;
 + (void)addCardShadowToLayer:(CALayer *)layer;
@@ -115,7 +135,8 @@ typedef NS_ENUM(NSUInteger, iPhone) {
 + (void)addDiagonalLineToView:(UIView *)view withColor:(UIColor *)color withThickness:(double)thickness withViewFrame:(CGRect) frame;
 + (void)fadeView:(UIView *)view;
 
-// Size Related
+#pragma mark - Size Related
+
 +(NSString *) deviceType;
 + (CGFloat) getPhoneWidth;
 + (CGFloat) getPhoneHeight;
@@ -128,7 +149,8 @@ typedef NS_ENUM(NSUInteger, iPhone) {
 + (CGFloat) isiPhone6;
 + (CGFloat) isiPhone6Plus;
 
-//Location Related
+#pragma mark - Location Related
+
 + (BOOL) isLocationPermissionAuthorized;
 + (BOOL) isLocationPermissionNotDetermined;
 + (BOOL) validateEmail:(NSString *) email;
