@@ -57,6 +57,10 @@
 		90D8167D1C158DF900E69C97 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8167C1C158DF900E69C97 /* Notification.m */; };
 		90D816811C15938900E69C97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90D816831C15938900E69C97 /* Localizable.strings */; };
 		90E6D0581C7CCD0E00D64CB9 /* SlingUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6D0571C7CCD0E00D64CB9 /* SlingUser.m */; };
+		90E6D05D1C7CDBF200D64CB9 /* sling.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90E6D05C1C7CDBF200D64CB9 /* sling.otf */; };
+		90E6D0611C7CDCA900D64CB9 /* Roboto-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90E6D05E1C7CDCA900D64CB9 /* Roboto-Light.otf */; };
+		90E6D0621C7CDCA900D64CB9 /* Roboto-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90E6D05F1C7CDCA900D64CB9 /* Roboto-Medium.otf */; };
+		90E6D0631C7CDCA900D64CB9 /* Roboto-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90E6D0601C7CDCA900D64CB9 /* Roboto-Regular.otf */; };
 		A8F00A49C742E048DCE53DBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C5AD534F037E03E6269EA2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +168,10 @@
 		90D816841C15938D00E69C97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		90E6D0561C7CCD0E00D64CB9 /* SlingUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlingUser.h; path = Sling/Utils/SlingUser.h; sourceTree = SOURCE_ROOT; };
 		90E6D0571C7CCD0E00D64CB9 /* SlingUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlingUser.m; path = Sling/Utils/SlingUser.m; sourceTree = SOURCE_ROOT; };
+		90E6D05C1C7CDBF200D64CB9 /* sling.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sling.otf; path = Sling/Assets/sling.otf; sourceTree = SOURCE_ROOT; };
+		90E6D05E1C7CDCA900D64CB9 /* Roboto-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.otf"; path = "Sling/Assets/Roboto-Light.otf"; sourceTree = SOURCE_ROOT; };
+		90E6D05F1C7CDCA900D64CB9 /* Roboto-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.otf"; path = "Sling/Assets/Roboto-Medium.otf"; sourceTree = SOURCE_ROOT; };
+		90E6D0601C7CDCA900D64CB9 /* Roboto-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.otf"; path = "Sling/Assets/Roboto-Regular.otf"; sourceTree = SOURCE_ROOT; };
 		CB62666A8AC424B18BEE7109 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FCF4A359F45AACFB58CA44C7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +209,7 @@
 		9050AC901C14123700CEB7AE /* Sling */ = {
 			isa = PBXGroup;
 			children = (
+				90E6D05B1C7CDB6200D64CB9 /* Assets */,
 				90D8167E1C15934900E69C97 /* Localizable */,
 				90D8160C1C14203000E69C97 /* Utils */,
 				90D8160B1C14202400E69C97 /* View Controllers */,
@@ -459,6 +468,17 @@
 			name = Class;
 			sourceTree = "<group>";
 		};
+		90E6D05B1C7CDB6200D64CB9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				90E6D05E1C7CDCA900D64CB9 /* Roboto-Light.otf */,
+				90E6D05F1C7CDCA900D64CB9 /* Roboto-Medium.otf */,
+				90E6D0601C7CDCA900D64CB9 /* Roboto-Regular.otf */,
+				90E6D05C1C7CDBF200D64CB9 /* sling.otf */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		B884CF125C5A7A311486D550 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,8 +557,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9050AC9E1C14123700CEB7AE /* Assets.xcassets in Resources */,
+				90E6D05D1C7CDBF200D64CB9 /* sling.otf in Resources */,
+				90E6D0611C7CDCA900D64CB9 /* Roboto-Light.otf in Resources */,
+				90E6D0631C7CDCA900D64CB9 /* Roboto-Regular.otf in Resources */,
 				90D816811C15938900E69C97 /* Localizable.strings in Resources */,
 				90D816791C147E6200E69C97 /* Appirater.podspec.json in Resources */,
+				90E6D0621C7CDCA900D64CB9 /* Roboto-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
