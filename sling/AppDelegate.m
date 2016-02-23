@@ -30,7 +30,7 @@
     
     if ([CommonFunction isUserLoggedIn])
     {
-        
+        [window setRootViewController:[CommonFunction getLoginViewController]];
     }
     else
     {
@@ -38,6 +38,13 @@
     }
     
     [window makeKeyAndVisible];
+}
+
+- (void) userLoggedIn {
+    
+    // Change this to TabViewController
+    
+    [window setRootViewController:[CommonFunction getLoginViewController]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
