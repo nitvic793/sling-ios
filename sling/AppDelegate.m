@@ -30,7 +30,7 @@
     
     if ([CommonFunction isUserLoggedIn])
     {
-        
+        [window setRootViewController:[CommonFunction getHomeTabViewController]];
     }
     else
     {

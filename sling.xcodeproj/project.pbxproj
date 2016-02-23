@@ -19,14 +19,6 @@
 		907E84181C7CC7CD005FFFB5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84111C7CC7CD005FFFB5 /* User.m */; };
 		907E841D1C7CC7EC005FFFB5 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */; };
 		907E84201C7CC802005FFFB5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E841F1C7CC802005FFFB5 /* LoginViewController.m */; };
-		907E84291C7CC814005FFFB5 /* ParentChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84221C7CC814005FFFB5 /* ParentChatViewController.m */; };
-		907E842A1C7CC814005FFFB5 /* ParentNoticeBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84241C7CC814005FFFB5 /* ParentNoticeBoardViewController.m */; };
-		907E842B1C7CC814005FFFB5 /* ParentReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84261C7CC814005FFFB5 /* ParentReviewViewController.m */; };
-		907E842C1C7CC814005FFFB5 /* ParentSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84281C7CC814005FFFB5 /* ParentSettingsViewController.m */; };
-		907E84351C7CC81F005FFFB5 /* TeacherChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E842E1C7CC81F005FFFB5 /* TeacherChatViewController.m */; };
-		907E84361C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84301C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m */; };
-		907E84371C7CC81F005FFFB5 /* TeacherReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84321C7CC81F005FFFB5 /* TeacherReviewViewController.m */; };
-		907E84381C7CC81F005FFFB5 /* TeacherSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84341C7CC81F005FFFB5 /* TeacherSettingsViewController.m */; };
 		90D8162B1C14798F00E69C97 /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8160E1C14798F00E69C97 /* CommonFunction.m */; };
 		90D8162C1C14798F00E69C97 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816101C14798F00E69C97 /* Constants.m */; };
 		90D8162D1C14798F00E69C97 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816121C14798F00E69C97 /* DBManager.m */; };
@@ -61,6 +53,11 @@
 		90E6D0611C7CDCA900D64CB9 /* Roboto-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90E6D05E1C7CDCA900D64CB9 /* Roboto-Light.otf */; };
 		90E6D0621C7CDCA900D64CB9 /* Roboto-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90E6D05F1C7CDCA900D64CB9 /* Roboto-Medium.otf */; };
 		90E6D0631C7CDCA900D64CB9 /* Roboto-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90E6D0601C7CDCA900D64CB9 /* Roboto-Regular.otf */; };
+		90E6D0661C7CDE3600D64CB9 /* HomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6D0651C7CDE3600D64CB9 /* HomeTabViewController.m */; };
+		90E6D0691C7CE20100D64CB9 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6D0681C7CE20100D64CB9 /* ChatViewController.m */; };
+		90E6D06C1C7CE20F00D64CB9 /* NoticeBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6D06B1C7CE20F00D64CB9 /* NoticeBoardViewController.m */; };
+		90E6D06F1C7CE21E00D64CB9 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6D06E1C7CE21E00D64CB9 /* ReviewViewController.m */; };
+		90E6D0721C7CE23100D64CB9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6D0711C7CE23100D64CB9 /* SettingsViewController.m */; };
 		A8F00A49C742E048DCE53DBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C5AD534F037E03E6269EA2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -90,22 +87,6 @@
 		907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNavigationController.m; path = "View Controllers/BaseNavigationController.m"; sourceTree = "<group>"; };
 		907E841E1C7CC802005FFFB5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = "View Controllers/LoginViewController.h"; sourceTree = "<group>"; };
 		907E841F1C7CC802005FFFB5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = "View Controllers/LoginViewController.m"; sourceTree = "<group>"; };
-		907E84211C7CC814005FFFB5 /* ParentChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentChatViewController.h; path = "View Controllers/ParentChatViewController.h"; sourceTree = "<group>"; };
-		907E84221C7CC814005FFFB5 /* ParentChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentChatViewController.m; path = "View Controllers/ParentChatViewController.m"; sourceTree = "<group>"; };
-		907E84231C7CC814005FFFB5 /* ParentNoticeBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentNoticeBoardViewController.h; path = "View Controllers/ParentNoticeBoardViewController.h"; sourceTree = "<group>"; };
-		907E84241C7CC814005FFFB5 /* ParentNoticeBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentNoticeBoardViewController.m; path = "View Controllers/ParentNoticeBoardViewController.m"; sourceTree = "<group>"; };
-		907E84251C7CC814005FFFB5 /* ParentReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentReviewViewController.h; path = "View Controllers/ParentReviewViewController.h"; sourceTree = "<group>"; };
-		907E84261C7CC814005FFFB5 /* ParentReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentReviewViewController.m; path = "View Controllers/ParentReviewViewController.m"; sourceTree = "<group>"; };
-		907E84271C7CC814005FFFB5 /* ParentSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentSettingsViewController.h; path = "View Controllers/ParentSettingsViewController.h"; sourceTree = "<group>"; };
-		907E84281C7CC814005FFFB5 /* ParentSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentSettingsViewController.m; path = "View Controllers/ParentSettingsViewController.m"; sourceTree = "<group>"; };
-		907E842D1C7CC81F005FFFB5 /* TeacherChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherChatViewController.h; path = "View Controllers/TeacherChatViewController.h"; sourceTree = "<group>"; };
-		907E842E1C7CC81F005FFFB5 /* TeacherChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherChatViewController.m; path = "View Controllers/TeacherChatViewController.m"; sourceTree = "<group>"; };
-		907E842F1C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherNoticeBoardViewController.h; path = "View Controllers/TeacherNoticeBoardViewController.h"; sourceTree = "<group>"; };
-		907E84301C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherNoticeBoardViewController.m; path = "View Controllers/TeacherNoticeBoardViewController.m"; sourceTree = "<group>"; };
-		907E84311C7CC81F005FFFB5 /* TeacherReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherReviewViewController.h; path = "View Controllers/TeacherReviewViewController.h"; sourceTree = "<group>"; };
-		907E84321C7CC81F005FFFB5 /* TeacherReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherReviewViewController.m; path = "View Controllers/TeacherReviewViewController.m"; sourceTree = "<group>"; };
-		907E84331C7CC81F005FFFB5 /* TeacherSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherSettingsViewController.h; path = "View Controllers/TeacherSettingsViewController.h"; sourceTree = "<group>"; };
-		907E84341C7CC81F005FFFB5 /* TeacherSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherSettingsViewController.m; path = "View Controllers/TeacherSettingsViewController.m"; sourceTree = "<group>"; };
 		90D8160D1C14798F00E69C97 /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonFunction.h; path = Utils/CommonFunction.h; sourceTree = "<group>"; };
 		90D8160E1C14798F00E69C97 /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonFunction.m; path = Utils/CommonFunction.m; sourceTree = "<group>"; };
 		90D8160F1C14798F00E69C97 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utils/Constants.h; sourceTree = "<group>"; };
@@ -172,6 +153,16 @@
 		90E6D05E1C7CDCA900D64CB9 /* Roboto-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.otf"; path = "Sling/Assets/Roboto-Light.otf"; sourceTree = SOURCE_ROOT; };
 		90E6D05F1C7CDCA900D64CB9 /* Roboto-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.otf"; path = "Sling/Assets/Roboto-Medium.otf"; sourceTree = SOURCE_ROOT; };
 		90E6D0601C7CDCA900D64CB9 /* Roboto-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.otf"; path = "Sling/Assets/Roboto-Regular.otf"; sourceTree = SOURCE_ROOT; };
+		90E6D0641C7CDE3600D64CB9 /* HomeTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTabViewController.h; path = "Sling/View Controllers/HomeTabViewController.h"; sourceTree = SOURCE_ROOT; };
+		90E6D0651C7CDE3600D64CB9 /* HomeTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTabViewController.m; path = "Sling/View Controllers/HomeTabViewController.m"; sourceTree = SOURCE_ROOT; };
+		90E6D0671C7CE20100D64CB9 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = "Sling/View Controllers/ChatViewController.h"; sourceTree = SOURCE_ROOT; };
+		90E6D0681C7CE20100D64CB9 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = "Sling/View Controllers/ChatViewController.m"; sourceTree = SOURCE_ROOT; };
+		90E6D06A1C7CE20F00D64CB9 /* NoticeBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoticeBoardViewController.h; path = "Sling/View Controllers/NoticeBoardViewController.h"; sourceTree = SOURCE_ROOT; };
+		90E6D06B1C7CE20F00D64CB9 /* NoticeBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoticeBoardViewController.m; path = "Sling/View Controllers/NoticeBoardViewController.m"; sourceTree = SOURCE_ROOT; };
+		90E6D06D1C7CE21E00D64CB9 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewViewController.h; path = "Sling/View Controllers/ReviewViewController.h"; sourceTree = SOURCE_ROOT; };
+		90E6D06E1C7CE21E00D64CB9 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewViewController.m; path = "Sling/View Controllers/ReviewViewController.m"; sourceTree = SOURCE_ROOT; };
+		90E6D0701C7CE23100D64CB9 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = "Sling/View Controllers/SettingsViewController.h"; sourceTree = SOURCE_ROOT; };
+		90E6D0711C7CE23100D64CB9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = "Sling/View Controllers/SettingsViewController.m"; sourceTree = SOURCE_ROOT; };
 		CB62666A8AC424B18BEE7109 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FCF4A359F45AACFB58CA44C7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,36 +226,6 @@
 				9050AC921C14123700CEB7AE /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		907E84191C7CC7D9005FFFB5 /* Teacher */ = {
-			isa = PBXGroup;
-			children = (
-				907E842D1C7CC81F005FFFB5 /* TeacherChatViewController.h */,
-				907E842E1C7CC81F005FFFB5 /* TeacherChatViewController.m */,
-				907E842F1C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.h */,
-				907E84301C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m */,
-				907E84311C7CC81F005FFFB5 /* TeacherReviewViewController.h */,
-				907E84321C7CC81F005FFFB5 /* TeacherReviewViewController.m */,
-				907E84331C7CC81F005FFFB5 /* TeacherSettingsViewController.h */,
-				907E84341C7CC81F005FFFB5 /* TeacherSettingsViewController.m */,
-			);
-			name = Teacher;
-			sourceTree = "<group>";
-		};
-		907E841A1C7CC7DE005FFFB5 /* Parent */ = {
-			isa = PBXGroup;
-			children = (
-				907E84211C7CC814005FFFB5 /* ParentChatViewController.h */,
-				907E84221C7CC814005FFFB5 /* ParentChatViewController.m */,
-				907E84231C7CC814005FFFB5 /* ParentNoticeBoardViewController.h */,
-				907E84241C7CC814005FFFB5 /* ParentNoticeBoardViewController.m */,
-				907E84251C7CC814005FFFB5 /* ParentReviewViewController.h */,
-				907E84261C7CC814005FFFB5 /* ParentReviewViewController.m */,
-				907E84271C7CC814005FFFB5 /* ParentSettingsViewController.h */,
-				907E84281C7CC814005FFFB5 /* ParentSettingsViewController.m */,
-			);
-			name = Parent;
 			sourceTree = "<group>";
 		};
 		90D816051C141FEE00E69C97 /* API */ = {
@@ -343,10 +304,18 @@
 				907E841F1C7CC802005FFFB5 /* LoginViewController.m */,
 				907E841B1C7CC7EC005FFFB5 /* BaseNavigationController.h */,
 				907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */,
-				907E841A1C7CC7DE005FFFB5 /* Parent */,
-				907E84191C7CC7D9005FFFB5 /* Teacher */,
 				90D8163A1C147A3C00E69C97 /* BaseViewController.h */,
 				90D8163B1C147A3C00E69C97 /* BaseViewController.m */,
+				90E6D0641C7CDE3600D64CB9 /* HomeTabViewController.h */,
+				90E6D0651C7CDE3600D64CB9 /* HomeTabViewController.m */,
+				90E6D0671C7CE20100D64CB9 /* ChatViewController.h */,
+				90E6D0681C7CE20100D64CB9 /* ChatViewController.m */,
+				90E6D06A1C7CE20F00D64CB9 /* NoticeBoardViewController.h */,
+				90E6D06B1C7CE20F00D64CB9 /* NoticeBoardViewController.m */,
+				90E6D06D1C7CE21E00D64CB9 /* ReviewViewController.h */,
+				90E6D06E1C7CE21E00D64CB9 /* ReviewViewController.m */,
+				90E6D0701C7CE23100D64CB9 /* SettingsViewController.h */,
+				90E6D0711C7CE23100D64CB9 /* SettingsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -627,17 +596,17 @@
 				90D816391C14798F00E69C97 /* UILabelCustomStyle.m in Sources */,
 				90D8162C1C14798F00E69C97 /* Constants.m in Sources */,
 				907E841D1C7CC7EC005FFFB5 /* BaseNavigationController.m in Sources */,
+				90E6D06F1C7CE21E00D64CB9 /* ReviewViewController.m in Sources */,
 				907E84131C7CC7CD005FFFB5 /* NoticeBoard.m in Sources */,
 				90D8166E1C147E1000E69C97 /* JVFloatLabeledTextField.m in Sources */,
-				907E84351C7CC81F005FFFB5 /* TeacherChatViewController.m in Sources */,
 				90D816331C14798F00E69C97 /* ImagePrefetcher.m in Sources */,
-				907E84381C7CC81F005FFFB5 /* TeacherSettingsViewController.m in Sources */,
 				90D816701C147E1000E69C97 /* NSString+TextDirectionality.m in Sources */,
 				90D8164A1C147BA600E69C97 /* UIDashedLine.m in Sources */,
+				90E6D0721C7CE23100D64CB9 /* SettingsViewController.m in Sources */,
 				90D8162E1C14798F00E69C97 /* FontIconMapping.m in Sources */,
-				907E842C1C7CC814005FFFB5 /* ParentSettingsViewController.m in Sources */,
 				9050AC961C14123700CEB7AE /* AppDelegate.m in Sources */,
 				90D816381C14798F00E69C97 /* UIImageView+CommonFunction.m in Sources */,
+				90E6D0661C7CDE3600D64CB9 /* HomeTabViewController.m in Sources */,
 				907E84141C7CC7CD005FFFB5 /* Parent.m in Sources */,
 				90D816761C147E3100E69C97 /* Appirater.m in Sources */,
 				90D8167D1C158DF900E69C97 /* Notification.m in Sources */,
@@ -645,20 +614,17 @@
 				907E84201C7CC802005FFFB5 /* LoginViewController.m in Sources */,
 				90D816471C147BA600E69C97 /* ImageSlider.m in Sources */,
 				90D8165F1C147DFB00E69C97 /* UICountingLabel.m in Sources */,
-				907E842B1C7CC814005FFFB5 /* ParentReviewViewController.m in Sources */,
 				90D8166F1C147E1000E69C97 /* JVFloatLabeledTextView.m in Sources */,
 				90D8162F1C14798F00E69C97 /* APIManager.m in Sources */,
 				907E84161C7CC7CD005FFFB5 /* Student.m in Sources */,
+				90E6D0691C7CE20100D64CB9 /* ChatViewController.m in Sources */,
 				90D8164B1C147BA600E69C97 /* UILabel+CustomStyle.m in Sources */,
-				907E84291C7CC814005FFFB5 /* ParentChatViewController.m in Sources */,
 				90D8162D1C14798F00E69C97 /* DBManager.m in Sources */,
+				90E6D06C1C7CE20F00D64CB9 /* NoticeBoardViewController.m in Sources */,
 				90D8162B1C14798F00E69C97 /* CommonFunction.m in Sources */,
 				907E84181C7CC7CD005FFFB5 /* User.m in Sources */,
 				90D816671C147E0600E69C97 /* RavenConfig.m in Sources */,
 				90D816481C147BA600E69C97 /* LocalNotificationView.m in Sources */,
-				907E842A1C7CC814005FFFB5 /* ParentNoticeBoardViewController.m in Sources */,
-				907E84371C7CC81F005FFFB5 /* TeacherReviewViewController.m in Sources */,
-				907E84361C7CC81F005FFFB5 /* TeacherNoticeBoardViewController.m in Sources */,
 				90D816341C14798F00E69C97 /* BaseObject.m in Sources */,
 				907E84171C7CC7CD005FFFB5 /* Teacher.m in Sources */,
 				907E84151C7CC7CD005FFFB5 /* Review.m in Sources */,

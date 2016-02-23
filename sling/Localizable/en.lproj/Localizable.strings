@@ -5,3 +5,8 @@
   Created by Satyam Krishna on 07/12/15.
   Copyright © 2015 Bitstax. All rights reserved.
 */
+
+"CHAT" = "Chat";
+"NOTICE_BOARD" = "Notice Board";
+"STUDENT_REVIEWS" = "Student Reviews";
+"SETTINGS" = "Settings";

@@ -13,15 +13,11 @@
 
 #import "LoginViewController.h"
 
-#import "ParentChatViewController.h"
-#import "ParentNoticeBoardViewController.h"
-#import "ParentReviewViewController.h"
-#import "ParentSettingsViewController.h"
-
-#import "TeacherChatViewController.h"
-#import "TeacherNoticeBoardViewController.h"
-#import "TeacherReviewViewController.h"
-#import "TeacherSettingsViewController.h"
+#import "HomeTabViewController.h"
+#import "ChatViewController.h"
+#import "NoticeBoardViewController.h"
+#import "ReviewViewController.h"
+#import "SettingsViewController.h"
 
 @implementation CommonFunction
 
@@ -347,6 +343,39 @@ static NSString *urlEncode(id object)
     LoginViewController *controller = [[LoginViewController alloc] init];
     return [CommonFunction getNavigationControllerForViewController:controller];
 }
+
+// Home Tabs
+
++ (UIViewController *) getHomeTabViewController
+{
+    HomeTabViewController *hvc = [[HomeTabViewController alloc] init];
+    return [CommonFunction getNavigationControllerForViewController:hvc];
+}
+
++ (UIViewController *) getChatViewController
+{
+    ChatViewController *cvc = [[ChatViewController alloc] init];
+    return cvc;
+}
+
++ (UIViewController *) getNoticeBoardViewController
+{
+    NoticeBoardViewController *nvc = [[NoticeBoardViewController alloc] init];
+    return nvc;
+}
+
++ (UIViewController *) getReviewViewController
+{
+    ReviewViewController *rvc = [[ReviewViewController alloc] init];
+    return rvc;
+}
+
++ (UIViewController *) getSettingsViewController
+{
+    SettingsViewController *svc = [[SettingsViewController alloc] init];
+    return svc;
+}
+
 
 #pragma mark -  Navigation Controller
 
