@@ -113,6 +113,11 @@ typedef NS_ENUM(NSUInteger, iPhone) {
 
 + (void) logOutUser;
 
++ (NSString *) getUserAccessToken;
+
++ (void) setUserAccessToken:(NSString *) access_token;
+
++ (void) deleteUserAccessToken;
 
 #pragma mark - UIViewController
 

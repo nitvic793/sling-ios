@@ -7,15 +7,14 @@
 //
 
 #import "BaseObject.h"
-#import "ClassNumber.h"
+#import "ClassRoom.h"
 
 @class Student;
 
 @interface Review : BaseObject
 
-@property (nonatomic, strong) NSString *uid;
 @property (nonatomic, strong) NSString *review;
-@property (nonatomic, strong) ClassNumber *classNumber;
+@property (nonatomic, strong) ClassRoom *classNumber;
 @property (nonatomic, strong) Student *student;
 
 @property (nonatomic, strong) NSDate *createdAt;

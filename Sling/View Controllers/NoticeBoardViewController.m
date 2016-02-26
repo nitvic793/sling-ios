@@ -21,6 +21,7 @@
     self = [super init];
     if (self)
     {
+        [self initalizeVariables];
         [self setupViews];
     }
     return self;
@@ -54,10 +55,16 @@
 
 -(void) makeAPICall
 {
-    if (areNoticesLoaded) {
+    if (!areNoticesLoaded) {
         if (!noticeBoardApi) {
             noticeBoardApi = [[NoticeBoardApi alloc] init];
-            
+            [noticeBoardApi fetchAllNoticesWithCompletion:^(NSCustomError *error) {
+                if (error) {
+                    [self handleError:error];
+                } else {
+                    
+                }
+            }];
         }
     }
 }

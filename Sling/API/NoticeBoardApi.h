@@ -7,7 +7,12 @@
 //
 
 #import "BaseObject.h"
+#import "APIManager.h"
 
 @interface NoticeBoardApi : BaseObject
+
+@property (nonatomic, strong) NSMutableArray *notices;
+
+-(void) fetchAllNoticesWithCompletion:(SimpleErrorCompletionBlock)block;
 
 @end

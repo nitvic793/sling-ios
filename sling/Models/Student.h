@@ -7,7 +7,7 @@
 //
 
 #import "BaseObject.h"
-#import "ClassNumber.h"
+#import "ClassRoom.h"
 #import "Parent.h"
 #import "Review.h"
 

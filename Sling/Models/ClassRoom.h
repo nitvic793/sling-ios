@@ -1,17 +1,16 @@
 //
-//  ClassNumber.h
+//  ClassRoom.h
 //  Sling
 //
-//  Created by Prince S. Valluri on 1/21/16.
-//  Copyright © 2016 Sling. All rights reserved.
+//  Created by Satyam Krishna on 27/02/16.
+//  Copyright © 2016 Bitstax. All rights reserved.
 //
 
 #import "BaseObject.h"
 #import "Teacher.h"
 
-@interface ClassNumber : BaseObject
+@interface ClassRoom : BaseObject
 
-@property (nonatomic, strong) NSString *uid;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *deprecationDate;
 @property (nonatomic, strong) NSString *room;
@@ -19,5 +18,6 @@
 
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, strong) NSDate *updatedAt;
+
 
 @end
