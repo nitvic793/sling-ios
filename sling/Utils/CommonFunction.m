@@ -349,31 +349,31 @@ static NSString *urlEncode(id object)
 + (UIViewController *) getHomeTabViewController
 {
     HomeTabViewController *hvc = [[HomeTabViewController alloc] init];
-    return [CommonFunction getNavigationControllerForViewController:hvc];
+    return hvc;
 }
 
 + (UIViewController *) getChatViewController
 {
     ChatViewController *cvc = [[ChatViewController alloc] init];
-    return cvc;
+    return [CommonFunction getNavigationControllerForViewController:cvc];
 }
 
 + (UIViewController *) getNoticeBoardViewController
 {
     NoticeBoardViewController *nvc = [[NoticeBoardViewController alloc] init];
-    return nvc;
+    return [CommonFunction getNavigationControllerForViewController:nvc];
 }
 
 + (UIViewController *) getReviewViewController
 {
     ReviewViewController *rvc = [[ReviewViewController alloc] init];
-    return rvc;
+    return [CommonFunction getNavigationControllerForViewController:rvc];
 }
 
 + (UIViewController *) getSettingsViewController
 {
     SettingsViewController *svc = [[SettingsViewController alloc] init];
-    return svc;
+    return [CommonFunction getNavigationControllerForViewController:svc];
 }
 
 

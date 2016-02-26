@@ -1,8 +1,8 @@
 //
-//  LoginApi.h
+//  UserApi.h
 //  Sling
 //
-//  Created by Satyam Krishna on 26/02/16.
+//  Created by Satyam Krishna on 27/02/16.
 //  Copyright © 2016 Bitstax. All rights reserved.
 //
 
@@ -10,8 +10,9 @@
 #import "SlingUser.h"
 #import "APIManager.h"
 
-@interface LoginApi : BaseObject
+@interface UserApi : BaseObject
 
 -(void) loginWithUser:(SlingUser *) aUser withCompletion:(SimpleErrorCompletionBlock)block;
+-(void) signUpWithUser:(SlingUser *) aUser withCompletion:(SimpleErrorCompletionBlock)block;
 
 @end

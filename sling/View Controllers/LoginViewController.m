@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "LoginApi.h"
+#import "UserApi.h"
 
 #define LOGO_WIDTH 100.0
 #define LOGO_HEIGHT 50.0
@@ -71,12 +71,14 @@
     [user setMobile:[usernameField text]];
     [user setPassword:[passwordField text]];
     [SVProgressHUD show];
-    LoginApi *loginApi = [[LoginApi alloc] init];
+    
+    UserApi *loginApi = [[UserApi alloc] init];
     [loginApi loginWithUser:user withCompletion:^(NSCustomError *error) {
+        [SVProgressHUD dismiss];
         if (error) {
-        
+
         } else {
-            
+            [[[UIApplication sharedApplication] keyWindow] setRootViewController:[CommonFunction getHomeTabViewController]];
         }
     }];
 }

@@ -19,7 +19,10 @@
 		907E84181C7CC7CD005FFFB5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84111C7CC7CD005FFFB5 /* User.m */; };
 		907E841D1C7CC7EC005FFFB5 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */; };
 		907E84201C7CC802005FFFB5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E841F1C7CC802005FFFB5 /* LoginViewController.m */; };
-		9084A4CE1C80B9D2002C4385 /* LoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4CD1C80B9D2002C4385 /* LoginApi.m */; };
+		9084A4D41C80D2CA002C4385 /* UserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4D31C80D2CA002C4385 /* UserApi.m */; };
+		9084A4D71C80D771002C4385 /* NoticeBoardApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4D61C80D771002C4385 /* NoticeBoardApi.m */; };
+		9084A4DA1C80DAB6002C4385 /* StudentReviewApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4D91C80DAB6002C4385 /* StudentReviewApi.m */; };
+		9084A4E21C80E53A002C4385 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4E11C80E53A002C4385 /* SettingCell.m */; };
 		90D8162B1C14798F00E69C97 /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8160E1C14798F00E69C97 /* CommonFunction.m */; };
 		90D8162C1C14798F00E69C97 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816101C14798F00E69C97 /* Constants.m */; };
 		90D8162D1C14798F00E69C97 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816121C14798F00E69C97 /* DBManager.m */; };
@@ -88,8 +91,14 @@
 		907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNavigationController.m; path = "View Controllers/BaseNavigationController.m"; sourceTree = "<group>"; };
 		907E841E1C7CC802005FFFB5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = "View Controllers/LoginViewController.h"; sourceTree = "<group>"; };
 		907E841F1C7CC802005FFFB5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = "View Controllers/LoginViewController.m"; sourceTree = "<group>"; };
-		9084A4CC1C80B9D2002C4385 /* LoginApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginApi.h; path = Sling/API/LoginApi.h; sourceTree = SOURCE_ROOT; };
-		9084A4CD1C80B9D2002C4385 /* LoginApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginApi.m; path = Sling/API/LoginApi.m; sourceTree = SOURCE_ROOT; };
+		9084A4D21C80D2CA002C4385 /* UserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserApi.h; path = Sling/API/UserApi.h; sourceTree = SOURCE_ROOT; };
+		9084A4D31C80D2CA002C4385 /* UserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserApi.m; path = Sling/API/UserApi.m; sourceTree = SOURCE_ROOT; };
+		9084A4D51C80D771002C4385 /* NoticeBoardApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoticeBoardApi.h; path = Sling/API/NoticeBoardApi.h; sourceTree = SOURCE_ROOT; };
+		9084A4D61C80D771002C4385 /* NoticeBoardApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoticeBoardApi.m; path = Sling/API/NoticeBoardApi.m; sourceTree = SOURCE_ROOT; };
+		9084A4D81C80DAB6002C4385 /* StudentReviewApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentReviewApi.h; path = Sling/API/StudentReviewApi.h; sourceTree = SOURCE_ROOT; };
+		9084A4D91C80DAB6002C4385 /* StudentReviewApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentReviewApi.m; path = Sling/API/StudentReviewApi.m; sourceTree = SOURCE_ROOT; };
+		9084A4E01C80E53A002C4385 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingCell.h; path = "Sling/Custom Cells/SettingCell.h"; sourceTree = SOURCE_ROOT; };
+		9084A4E11C80E53A002C4385 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingCell.m; path = "Sling/Custom Cells/SettingCell.m"; sourceTree = SOURCE_ROOT; };
 		90D8160D1C14798F00E69C97 /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonFunction.h; path = Utils/CommonFunction.h; sourceTree = "<group>"; };
 		90D8160E1C14798F00E69C97 /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonFunction.m; path = Utils/CommonFunction.m; sourceTree = "<group>"; };
 		90D8160F1C14798F00E69C97 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utils/Constants.h; sourceTree = "<group>"; };
@@ -234,6 +243,10 @@
 		9084A4C91C80B8D7002C4385 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9084A4D51C80D771002C4385 /* NoticeBoardApi.h */,
+				9084A4D61C80D771002C4385 /* NoticeBoardApi.m */,
+				9084A4D81C80DAB6002C4385 /* StudentReviewApi.h */,
+				9084A4D91C80DAB6002C4385 /* StudentReviewApi.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -241,6 +254,8 @@
 		9084A4CA1C80B8DC002C4385 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				9084A4D21C80D2CA002C4385 /* UserApi.h */,
+				9084A4D31C80D2CA002C4385 /* UserApi.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -260,13 +275,62 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		9084A4DB1C80DFCA002C4385 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				90E6D0701C7CE23100D64CB9 /* SettingsViewController.h */,
+				90E6D0711C7CE23100D64CB9 /* SettingsViewController.m */,
+				907E841E1C7CC802005FFFB5 /* LoginViewController.h */,
+				907E841F1C7CC802005FFFB5 /* LoginViewController.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		9084A4DC1C80DFDA002C4385 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				907E841B1C7CC7EC005FFFB5 /* BaseNavigationController.h */,
+				907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */,
+				90D8163A1C147A3C00E69C97 /* BaseViewController.h */,
+				90D8163B1C147A3C00E69C97 /* BaseViewController.m */,
+				90E6D0641C7CDE3600D64CB9 /* HomeTabViewController.h */,
+				90E6D0651C7CDE3600D64CB9 /* HomeTabViewController.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		9084A4DD1C80DFE7002C4385 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				90E6D0671C7CE20100D64CB9 /* ChatViewController.h */,
+				90E6D0681C7CE20100D64CB9 /* ChatViewController.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		9084A4DE1C80DFEF002C4385 /* Notice Board */ = {
+			isa = PBXGroup;
+			children = (
+				90E6D06A1C7CE20F00D64CB9 /* NoticeBoardViewController.h */,
+				90E6D06B1C7CE20F00D64CB9 /* NoticeBoardViewController.m */,
+			);
+			name = "Notice Board";
+			sourceTree = "<group>";
+		};
+		9084A4DF1C80DFF6002C4385 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				90E6D06D1C7CE21E00D64CB9 /* ReviewViewController.h */,
+				90E6D06E1C7CE21E00D64CB9 /* ReviewViewController.m */,
+			);
+			name = Review;
+			sourceTree = "<group>";
+		};
 		90D816051C141FEE00E69C97 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				9084A4CA1C80B8DC002C4385 /* User */,
 				9084A4C91C80B8D7002C4385 /* Class */,
-				9084A4CC1C80B9D2002C4385 /* LoginApi.h */,
-				9084A4CD1C80B9D2002C4385 /* LoginApi.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -274,6 +338,8 @@
 		90D816061C141FFE00E69C97 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				9084A4E01C80E53A002C4385 /* SettingCell.h */,
+				9084A4E11C80E53A002C4385 /* SettingCell.m */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -321,22 +387,11 @@
 		90D8160B1C14202400E69C97 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				907E841E1C7CC802005FFFB5 /* LoginViewController.h */,
-				907E841F1C7CC802005FFFB5 /* LoginViewController.m */,
-				907E841B1C7CC7EC005FFFB5 /* BaseNavigationController.h */,
-				907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */,
-				90D8163A1C147A3C00E69C97 /* BaseViewController.h */,
-				90D8163B1C147A3C00E69C97 /* BaseViewController.m */,
-				90E6D0641C7CDE3600D64CB9 /* HomeTabViewController.h */,
-				90E6D0651C7CDE3600D64CB9 /* HomeTabViewController.m */,
-				90E6D0671C7CE20100D64CB9 /* ChatViewController.h */,
-				90E6D0681C7CE20100D64CB9 /* ChatViewController.m */,
-				90E6D06A1C7CE20F00D64CB9 /* NoticeBoardViewController.h */,
-				90E6D06B1C7CE20F00D64CB9 /* NoticeBoardViewController.m */,
-				90E6D06D1C7CE21E00D64CB9 /* ReviewViewController.h */,
-				90E6D06E1C7CE21E00D64CB9 /* ReviewViewController.m */,
-				90E6D0701C7CE23100D64CB9 /* SettingsViewController.h */,
-				90E6D0711C7CE23100D64CB9 /* SettingsViewController.m */,
+				9084A4DF1C80DFF6002C4385 /* Review */,
+				9084A4DE1C80DFEF002C4385 /* Notice Board */,
+				9084A4DD1C80DFE7002C4385 /* Chat */,
+				9084A4DC1C80DFDA002C4385 /* Utils */,
+				9084A4DB1C80DFCA002C4385 /* User */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -608,6 +663,7 @@
 				90D816661C147E0600E69C97 /* RavenClient.m in Sources */,
 				90D816391C14798F00E69C97 /* UILabelCustomStyle.m in Sources */,
 				90D8162C1C14798F00E69C97 /* Constants.m in Sources */,
+				9084A4D71C80D771002C4385 /* NoticeBoardApi.m in Sources */,
 				907E841D1C7CC7EC005FFFB5 /* BaseNavigationController.m in Sources */,
 				90E6D06F1C7CE21E00D64CB9 /* ReviewViewController.m in Sources */,
 				907E84131C7CC7CD005FFFB5 /* NoticeBoard.m in Sources */,
@@ -615,6 +671,7 @@
 				90D816331C14798F00E69C97 /* ImagePrefetcher.m in Sources */,
 				90D816701C147E1000E69C97 /* NSString+TextDirectionality.m in Sources */,
 				90D8164A1C147BA600E69C97 /* UIDashedLine.m in Sources */,
+				9084A4D41C80D2CA002C4385 /* UserApi.m in Sources */,
 				90E6D0721C7CE23100D64CB9 /* SettingsViewController.m in Sources */,
 				90D8162E1C14798F00E69C97 /* FontIconMapping.m in Sources */,
 				9050AC961C14123700CEB7AE /* AppDelegate.m in Sources */,
@@ -638,13 +695,14 @@
 				907E84181C7CC7CD005FFFB5 /* User.m in Sources */,
 				90D816671C147E0600E69C97 /* RavenConfig.m in Sources */,
 				90D816481C147BA600E69C97 /* LocalNotificationView.m in Sources */,
+				9084A4DA1C80DAB6002C4385 /* StudentReviewApi.m in Sources */,
+				9084A4E21C80E53A002C4385 /* SettingCell.m in Sources */,
 				90D816341C14798F00E69C97 /* BaseObject.m in Sources */,
 				907E84171C7CC7CD005FFFB5 /* Teacher.m in Sources */,
 				907E84151C7CC7CD005FFFB5 /* Review.m in Sources */,
 				90D8163C1C147A3C00E69C97 /* BaseViewController.m in Sources */,
 				90D816361C14798F00E69C97 /* STableViewCell.m in Sources */,
 				907E84121C7CC7CD005FFFB5 /* ClassNumber.m in Sources */,
-				9084A4CE1C80B9D2002C4385 /* LoginApi.m in Sources */,
 				90D816351C14798F00E69C97 /* SettingsManager.m in Sources */,
 				9050AC931C14123700CEB7AE /* main.m in Sources */,
 				90D816491C147BA600E69C97 /* NavigationHeaderView.m in Sources */,

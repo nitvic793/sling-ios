@@ -42,6 +42,8 @@
     [self setViewControllers:vcArray];
     [self setSelectedIndex:0];
     
+    [[UITabBar appearance] setBarTintColor:UIColorFromRGB(TAB_BAR_BACKGROUND)];
+    
     [self.tabBar setFrame:CGRectMake(self.tabBar.frame.origin.x, self.tabBar.frame.origin.y, self.tabBar.frame.size.width, 49)];
     [self.tabBar setTranslucent:NO];
     [self.tabBar setTintColor:UIColorFromRGB(GBL8)];
