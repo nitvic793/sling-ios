@@ -19,6 +19,7 @@
 		907E84181C7CC7CD005FFFB5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E84111C7CC7CD005FFFB5 /* User.m */; };
 		907E841D1C7CC7EC005FFFB5 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */; };
 		907E84201C7CC802005FFFB5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 907E841F1C7CC802005FFFB5 /* LoginViewController.m */; };
+		9084A4CE1C80B9D2002C4385 /* LoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4CD1C80B9D2002C4385 /* LoginApi.m */; };
 		90D8162B1C14798F00E69C97 /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8160E1C14798F00E69C97 /* CommonFunction.m */; };
 		90D8162C1C14798F00E69C97 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816101C14798F00E69C97 /* Constants.m */; };
 		90D8162D1C14798F00E69C97 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816121C14798F00E69C97 /* DBManager.m */; };
@@ -87,6 +88,8 @@
 		907E841C1C7CC7EC005FFFB5 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNavigationController.m; path = "View Controllers/BaseNavigationController.m"; sourceTree = "<group>"; };
 		907E841E1C7CC802005FFFB5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = "View Controllers/LoginViewController.h"; sourceTree = "<group>"; };
 		907E841F1C7CC802005FFFB5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = "View Controllers/LoginViewController.m"; sourceTree = "<group>"; };
+		9084A4CC1C80B9D2002C4385 /* LoginApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginApi.h; path = Sling/API/LoginApi.h; sourceTree = SOURCE_ROOT; };
+		9084A4CD1C80B9D2002C4385 /* LoginApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginApi.m; path = Sling/API/LoginApi.m; sourceTree = SOURCE_ROOT; };
 		90D8160D1C14798F00E69C97 /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonFunction.h; path = Utils/CommonFunction.h; sourceTree = "<group>"; };
 		90D8160E1C14798F00E69C97 /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonFunction.m; path = Utils/CommonFunction.m; sourceTree = "<group>"; };
 		90D8160F1C14798F00E69C97 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utils/Constants.h; sourceTree = "<group>"; };
@@ -228,9 +231,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9084A4C91C80B8D7002C4385 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		9084A4CA1C80B8DC002C4385 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		9084A4CB1C80B8EF002C4385 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				907E84081C7CC7CD005FFFB5 /* Parent.h */,
+				907E84091C7CC7CD005FFFB5 /* Parent.m */,
+				907E840C1C7CC7CD005FFFB5 /* Student.h */,
+				907E840D1C7CC7CD005FFFB5 /* Student.m */,
+				907E840E1C7CC7CD005FFFB5 /* Teacher.h */,
+				907E840F1C7CC7CD005FFFB5 /* Teacher.m */,
+				907E84101C7CC7CD005FFFB5 /* User.h */,
+				907E84111C7CC7CD005FFFB5 /* User.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		90D816051C141FEE00E69C97 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9084A4CA1C80B8DC002C4385 /* User */,
+				9084A4C91C80B8D7002C4385 /* Class */,
+				9084A4CC1C80B9D2002C4385 /* LoginApi.h */,
+				9084A4CD1C80B9D2002C4385 /* LoginApi.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -274,23 +310,8 @@
 		90D8160A1C14202100E69C97 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9084A4CB1C80B8EF002C4385 /* User */,
 				90E6D0551C7CCCC200D64CB9 /* Class */,
-				90E6D0541C7CCCBC00D64CB9 /* Parent */,
-				90E6D0531C7CCCB700D64CB9 /* Teacher */,
-				907E84041C7CC7CD005FFFB5 /* ClassNumber.h */,
-				907E84051C7CC7CD005FFFB5 /* ClassNumber.m */,
-				907E84061C7CC7CD005FFFB5 /* NoticeBoard.h */,
-				907E84071C7CC7CD005FFFB5 /* NoticeBoard.m */,
-				907E84081C7CC7CD005FFFB5 /* Parent.h */,
-				907E84091C7CC7CD005FFFB5 /* Parent.m */,
-				907E840A1C7CC7CD005FFFB5 /* Review.h */,
-				907E840B1C7CC7CD005FFFB5 /* Review.m */,
-				907E840C1C7CC7CD005FFFB5 /* Student.h */,
-				907E840D1C7CC7CD005FFFB5 /* Student.m */,
-				907E840E1C7CC7CD005FFFB5 /* Teacher.h */,
-				907E840F1C7CC7CD005FFFB5 /* Teacher.m */,
-				907E84101C7CC7CD005FFFB5 /* User.h */,
-				907E84111C7CC7CD005FFFB5 /* User.m */,
 				90D8167B1C158DF900E69C97 /* Notification.h */,
 				90D8167C1C158DF900E69C97 /* Notification.m */,
 			);
@@ -416,23 +437,15 @@
 			name = Localizable;
 			sourceTree = "<group>";
 		};
-		90E6D0531C7CCCB700D64CB9 /* Teacher */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Teacher;
-			sourceTree = "<group>";
-		};
-		90E6D0541C7CCCBC00D64CB9 /* Parent */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Parent;
-			sourceTree = "<group>";
-		};
 		90E6D0551C7CCCC200D64CB9 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				907E84041C7CC7CD005FFFB5 /* ClassNumber.h */,
+				907E84051C7CC7CD005FFFB5 /* ClassNumber.m */,
+				907E84061C7CC7CD005FFFB5 /* NoticeBoard.h */,
+				907E84071C7CC7CD005FFFB5 /* NoticeBoard.m */,
+				907E840A1C7CC7CD005FFFB5 /* Review.h */,
+				907E840B1C7CC7CD005FFFB5 /* Review.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -631,6 +644,7 @@
 				90D8163C1C147A3C00E69C97 /* BaseViewController.m in Sources */,
 				90D816361C14798F00E69C97 /* STableViewCell.m in Sources */,
 				907E84121C7CC7CD005FFFB5 /* ClassNumber.m in Sources */,
+				9084A4CE1C80B9D2002C4385 /* LoginApi.m in Sources */,
 				90D816351C14798F00E69C97 /* SettingsManager.m in Sources */,
 				9050AC931C14123700CEB7AE /* main.m in Sources */,
 				90D816491C147BA600E69C97 /* NavigationHeaderView.m in Sources */,

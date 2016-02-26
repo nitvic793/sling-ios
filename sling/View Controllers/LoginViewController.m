@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "LoginApi.h"
 
 #define LOGO_WIDTH 100.0
 #define LOGO_HEIGHT 50.0
@@ -65,22 +66,19 @@
 
 - (void) loginButtonClicked:(id)sender {
     [SVProgressHUD show];
-    [[APIManager sharedManager] sendOperationForURL:@"login"
-                                          andMethod:HTTP_POST
-                                         andHeaders:nil
-                                          andParams:@{@"username": usernameField.text, @"password": passwordField.text}
-                                            andBody:nil
-                                    andSuccessBlock:^(id responseObject) {
-                                        if ([[(NSDictionary *)responseObject objectForKey:@"status"] isEqualToString:@"1"]) {
-                                            [SVProgressHUD showSuccessWithStatus:@"Logged In"];
-                                        } else {
-                                            [SVProgressHUD showSuccessWithStatus:@"Login Error"];
-                                        }
-                                        [SVProgressHUD showSuccessWithStatus:@"Logged In"];
-                                    }
-                                    andFailureBlock:^(NSCustomError *error) {
+    
+    SlingUser *user = [[SlingUser alloc] init];
+    [user setMobile:[usernameField text]];
+    [user setPassword:[passwordField text]];
+    [SVProgressHUD show];
+    LoginApi *loginApi = [[LoginApi alloc] init];
+    [loginApi loginWithUser:user withCompletion:^(NSCustomError *error) {
+        if (error) {
         
-                                    }];
+        } else {
+            
+        }
+    }];
 }
 
 -(BOOL) prefersStatusBarHidden
