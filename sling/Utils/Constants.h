@@ -32,6 +32,7 @@ static NSString *HTTP_DELETE = @"DELETE";
 #define API_LIVE_URL @"sling-server.herokuapp.com"
 #define API_STAGE_URL @"sling-server.herokuapp.com"
 
+#define API_USER_ACCESS_TOKEN @"Authorization"
 
 #define API_NA @"-NA-"
 

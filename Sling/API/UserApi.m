@@ -50,6 +50,12 @@
     sharedUser.mobile = [self getStringForKey:@"phoneNumber" fromDictionary:responseObject withInitialValue:sharedUser.mobile];
     sharedUser.uuid = [self getStringForKey:@"id" fromDictionary:responseObject withInitialValue:sharedUser.uuid];
     [sharedUser saveInstance];
+    
+    // Login User
+    
+    NSData *plainData = [[NSString stringWithFormat:@"%@:%@", [user mobile], [user password]] dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *encodedUsernameAndPassword = [plainData base64EncodedStringWithOptions:0];
+    [CommonFunction setUserAccessToken:[NSString stringWithFormat:@"Basic %@", encodedUsernameAndPassword]];
     [CommonFunction setUserLoggedIn];
 }
 

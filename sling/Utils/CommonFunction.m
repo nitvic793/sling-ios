@@ -356,6 +356,37 @@ static NSString *urlEncode(id object)
     [CommonFunction setUserLoggedOut];
 }
 
++ (NSString *) getUserAccessToken
+{
+    return [[NSUserDefaults standardUserDefaults] stringForKey:ACCESS_TOKEN];
+}
+
++ (void) setUserAccessToken:(NSString *) access_token
+{
+    [[NSUserDefaults standardUserDefaults] setObject:access_token forKey:ACCESS_TOKEN];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [CommonFunction updateApiManagerHeaders];
+}
+
++ (void) deleteUserAccessToken
+{
+    [[[[APIManager sharedManager] apiManager] requestSerializer] setValue:nil forHTTPHeaderField:API_USER_ACCESS_TOKEN];
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:ACCESS_TOKEN];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [CommonFunction updateApiManagerHeaders];
+}
+
++ (void) updateApiManagerHeaders
+{
+    NSDictionary *headersDictionary = [APIManager defaultHeaders];
+    
+    for (id key in [headersDictionary allKeys])
+    {
+        [[[[APIManager sharedManager] apiManager] requestSerializer] setValue:[headersDictionary objectForKey:key] forHTTPHeaderField:key];
+    }
+}
+
 
 #pragma mark - UIViewControllers
 

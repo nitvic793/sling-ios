@@ -23,7 +23,9 @@ typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSEr
       {
           _sharedApiManager = [[APIManager alloc] init];
           _sharedApiManager.apiManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[APIManager baseURLPath]];
+          
           NSDictionary *headersDictionary = [APIManager defaultHeaders];
+          
           for (id key in [headersDictionary allKeys])
           {
               [_sharedApiManager.apiManager.requestSerializer setValue:[headersDictionary objectForKey:key] forHTTPHeaderField:key];
@@ -37,31 +39,36 @@ typedef void (^AFResponseBlock)(NSURLResponse *response, id responseObject, NSEr
 
 + (NSDictionary *) defaultHeaders
 {
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *headerDict = [[NSMutableDictionary alloc] init];
     
-    [dic setObject:@"consumer_ios" forKey:@"app_client"];
-    [dic setObject:[NSString stringWithFormat:@"%d",VERSION_NUMBER] forKey:@"app_version"];
-    [dic setObject:@"gzip" forKey:@"Accept-Encoding"];
-    [dic setObject:[[UIDevice currentDevice] systemVersion] forKey:@"device_os"];
+    if([CommonFunction isUserLoggedIn] && [[CommonFunction getUserAccessToken] length] > 0)
+    {
+        [headerDict setObject:[CommonFunction getUserAccessToken] forKey:API_USER_ACCESS_TOKEN];
+    }
+    
+    [headerDict setObject:@"consumer_ios" forKey:@"app_client"];
+    [headerDict setObject:[NSString stringWithFormat:@"%d",VERSION_NUMBER] forKey:@"app_version"];
+    [headerDict setObject:@"gzip" forKey:@"Accept-Encoding"];
+    [headerDict setObject:[[UIDevice currentDevice] systemVersion] forKey:@"device_os"];
     
     switch ([CommonFunction getIphoneType])
     {
         case iPhone4:
         case iPhone5:
-            [dic setObject:@"2x" forKey:@"screen_density"];
+            [headerDict setObject:@"2x" forKey:@"screen_density"];
             break;
         case iPhone6:
-            [dic setObject:@"2.5x" forKey:@"screen_density"];
+            [headerDict setObject:@"2.5x" forKey:@"screen_density"];
             break;
         case iPhone6Plus:
-            [dic setObject:@"3x" forKey:@"screen_density"];
+            [headerDict setObject:@"3x" forKey:@"screen_density"];
             break;
         default:
-            [dic setObject:@"3x" forKey:@"screen_density"];
+            [headerDict setObject:@"3x" forKey:@"screen_density"];
             break;
     }
     
-    return dic;
+    return headerDict;
 }
 
 - (NSURLSessionDataTask *)sendOperationForURL:(NSString *) apiPath
