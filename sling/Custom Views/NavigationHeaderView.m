@@ -57,24 +57,8 @@
 
 - (void) layoutSubviews
 {
-    if (!hasCloseButton)
-    {
-        if ([CommonFunction isIOS9])
-        {
-            [titleLabel setFrame:CGRectMake(0, 0, [CommonFunction getPhoneWidth]-120, H(self))];
-        }
-        else
-        {
-            [titleLabel setFrame:CGRectMake(0, 0, [CommonFunction getPhoneWidth]-94, H(self))];
-        }
-    }
-    else
-    {
-        [titleLabel setFrame:CGRectMake(0, 0, [CommonFunction getPhoneWidth]-89, H(self))];
-    }
-    
+    [titleLabel setFrame:CGRectMake(0, 0, [CommonFunction getPhoneWidth], H(self))];
     [titleLabel setTextAlignment:NSTextAlignmentCenter];
-    
     [self addSubview:titleLabel];
 }
 

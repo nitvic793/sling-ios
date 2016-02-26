@@ -10,8 +10,11 @@
 #import "CommonFunction.h"
 #import "UIViewController+ScrollingNavbar.h"
 
-@interface BaseViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface BaseViewController : UIViewController <UIGestureRecognizerDelegate,NoResourceViewDelegate>
 
 @property (nonatomic, strong) NSString *screenName;
+
+-(void) handleError:(NSCustomError *)error;
+-(void) hideNoResourceView;
 
 @end

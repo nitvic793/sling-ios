@@ -11,6 +11,9 @@
 #import "AppDelegate.h"
 
 @implementation BaseViewController
+{
+    NoResourceView *nrv;
+}
 
 - (id) init
 {
@@ -20,6 +23,36 @@
         
     }
     return self;
+}
+
+-(void) hideNoResourceView
+{
+    [nrv setHidden:YES];
+}
+
+-(void) handleError:(NSCustomError *)error
+{
+    if([SVProgressHUD isVisible])
+    {
+        [SVProgressHUD dismiss];
+    }
+    
+    if ([error isCancelError])
+    {
+        
+    }
+    else if([error noInternet])
+    {
+        nrv = [CommonFunction noInternetResourceViewWithFrame:NO_RESOURCE_FRAME andDelegate:self];
+        [[self view] addSubview:nrv];
+        [nrv setHidden:NO];
+    }
+    else// if([error isServerError])
+    {
+        nrv = [CommonFunction noServerResourceViewWithFrame:NO_RESOURCE_FRAME andDelegate:self];
+        [[self view] addSubview:nrv];
+        [nrv setHidden:NO];
+    }
 }
 
 @end

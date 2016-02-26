@@ -11,7 +11,7 @@
 
 @interface BaseObject : NSObject
 
-@property (nonatomic, strong) NSNumber* gid;
+@property (nonatomic, strong) NSString* uuid;
 
 - (BOOL) isObjectWithSameGid : (BaseObject *) gObject;
 

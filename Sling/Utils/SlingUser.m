@@ -13,10 +13,11 @@
 
 @implementation SlingUser
 
-@synthesize gid;
+@synthesize uuid;
 @synthesize name;
 @synthesize email;
 @synthesize mobile;
+@synthesize password;
 @synthesize deviceToken;
 
 
@@ -53,6 +54,7 @@
         mobile           = @"";
         email            = @"";
         deviceToken      = @"";
+        password         = @"";
     }
     return self;
 }
@@ -62,7 +64,7 @@
     self = [super init];
     if(self)
     {
-        gid         = [decoder decodeObjectForKey:@"user_id"];
+        uuid        = [decoder decodeObjectForKey:@"user_id"];
         name        = [decoder decodeObjectForKey:@"user_name"];
         mobile      = [decoder decodeObjectForKey:@"user_mobile"];
         email       = [decoder decodeObjectForKey:@"user_email"];
@@ -73,7 +75,7 @@
 
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
-    [encoder encodeObject:gid forKey:@"user_id"];
+    [encoder encodeObject:uuid forKey:@"user_id"];
     [encoder encodeObject:name forKey:@"user_name"];
     [encoder encodeObject:mobile forKey:@"user_mobile"];
     [encoder encodeObject:email forKey:@"user_email"];

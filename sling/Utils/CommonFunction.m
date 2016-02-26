@@ -21,6 +21,27 @@
 
 @implementation CommonFunction
 
+#pragma mark - No Resource View
+
++(NoResourceView *) noInternetResourceViewWithFrame:(CGRect) frame andDelegate:delegate
+{
+    NoResourceView *nrv = [[NoResourceView alloc] initWithIconText:FONT_ICON_COG andMainText:NSLocalizedString(@"NO_INTERNET_RES_MAIN", nil) andSubText:NSLocalizedString(@"NO_INTERNET_RES_SUB", nil) andButtonText:NSLocalizedString(@"NO_INTERNET_RES_BUTTON", nil) andTag:NO_RESOURCE_INTERNET_TAG];
+    [nrv setFrame:frame];
+    [nrv setDelegate:delegate];
+    return nrv;
+}
+
++(NoResourceView *) noServerResourceViewWithFrame:(CGRect) frame andDelegate:delegate
+{
+    NoResourceView *nrv = [[NoResourceView alloc] initWithIconText:FONT_ICON_COG andMainText:NSLocalizedString(@"SERVER_RES_MAIN", nil) andSubText:NSLocalizedString(@"SERVER_RES_SUB", nil) andButtonText:NSLocalizedString(@"SERVER_RES_BUTTON", nil) andTag:NO_RESOURCE_SERVER_TAG];
+    [[nrv iconLabel] setFont:FONT_ICON(105)];
+    [nrv setFrame:frame];
+    [nrv setDelegate:delegate];
+    return nrv;
+}
+
+#pragma mark -
+
 +(void) printMethodTrace
 {
     NSString *sourceString = [[NSThread callStackSymbols] objectAtIndex:1];
@@ -349,31 +370,31 @@ static NSString *urlEncode(id object)
 + (UIViewController *) getHomeTabViewController
 {
     HomeTabViewController *hvc = [[HomeTabViewController alloc] init];
-    return [CommonFunction getNavigationControllerForViewController:hvc];
+    return hvc;
 }
 
 + (UIViewController *) getChatViewController
 {
     ChatViewController *cvc = [[ChatViewController alloc] init];
-    return cvc;
+    return [CommonFunction getNavigationControllerForViewController:cvc];
 }
 
 + (UIViewController *) getNoticeBoardViewController
 {
     NoticeBoardViewController *nvc = [[NoticeBoardViewController alloc] init];
-    return nvc;
+    return [CommonFunction getNavigationControllerForViewController:nvc];
 }
 
 + (UIViewController *) getReviewViewController
 {
     ReviewViewController *rvc = [[ReviewViewController alloc] init];
-    return rvc;
+    return [CommonFunction getNavigationControllerForViewController:rvc];
 }
 
 + (UIViewController *) getSettingsViewController
 {
     SettingsViewController *svc = [[SettingsViewController alloc] init];
-    return svc;
+    return [CommonFunction getNavigationControllerForViewController:svc];
 }
 
 

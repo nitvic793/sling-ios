@@ -12,13 +12,13 @@
 
 - (BOOL) isObjectWithSameGid : (BaseObject *) gObject;
 {
-    if(gObject.gid == Nil || self.gid == Nil)
+    if(gObject.uuid == Nil || self.uuid == Nil)
     {
         return NO;
     }
     else
     {
-        if(gObject.gid.integerValue == self.gid.integerValue)
+        if(gObject.uuid.integerValue == self.uuid.integerValue)
         {
             return YES;
         }

@@ -60,6 +60,7 @@ static NSString *HTTP_DELETE = @"DELETE";
 #define URC_LOW                      3.0
 #define URC_MEDIUM                   5.0
 #define NAVIGATION_BAR_HEIGHT        64.0
+#define TAB_BAR_HEIGHT               49.0
 #define MAIN_HEADER_HEIGHT           45.0f
 #define MAIN_HEADER_SEPARATOR_HEIGHT SEPARATOR_THINNEST
 #define TAB_BAR_HEIGHT               49.0
@@ -177,7 +178,7 @@ static NSString *HTTP_DELETE = @"DELETE";
 
 #define SEPARATOR_COLOR       GBL5
 #define SEPARATOR_COLOR_LIGHT GBL4
-#define LOADING_BG_COLOR      GBL5
+#define LOADING_BG_COLOR      0xEDEDED
 #define APPLE_SEP_COLOR       0xEFEFF4
 #define WHITE_COLOR           0xFFFFFF
 #define BLACK_COLOR           0x000000
@@ -201,6 +202,7 @@ static NSString *HTTP_DELETE = @"DELETE";
 #define NAV_BAR_COLOR         0x3C96F2
 #define NAV_SEARCH_BCG_COLOR  0x262C2E
 #define NAV_BAR_ITEMS_COLOR   WHITE_COLOR
+#define TAB_BAR_BACKGROUND    0xF8F8F8
 
 
 //********************* ENDS **************************
