@@ -10,3 +10,11 @@
 "NOTICE_BOARD" = "Notice Board";
 "STUDENT_REVIEWS" = "Student Reviews";
 "SETTINGS" = "Settings";
+
+"NO_INTERNET_RES_MAIN" = "No Internet Connection";
+"NO_INTERNET_RES_SUB" = "Check your internet connection";
+"NO_INTERNET_RES_BUTTON" = "Tap to Retry";
+
+"SERVER_RES_MAIN" = "Oops! Something went wrong";
+"SERVER_RES_SUB" = "We\'re working to get it fixed as soon as we can";
+"SERVER_RES_BUTTON" = "Tap to Retry";

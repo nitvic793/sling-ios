@@ -23,6 +23,7 @@
 		9084A4D71C80D771002C4385 /* NoticeBoardApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4D61C80D771002C4385 /* NoticeBoardApi.m */; };
 		9084A4DA1C80DAB6002C4385 /* StudentReviewApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4D91C80DAB6002C4385 /* StudentReviewApi.m */; };
 		9084A4E21C80E53A002C4385 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4E11C80E53A002C4385 /* SettingCell.m */; };
+		9084A4E51C80EC91002C4385 /* NoResourceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9084A4E41C80EC91002C4385 /* NoResourceView.m */; };
 		90D8162B1C14798F00E69C97 /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D8160E1C14798F00E69C97 /* CommonFunction.m */; };
 		90D8162C1C14798F00E69C97 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816101C14798F00E69C97 /* Constants.m */; };
 		90D8162D1C14798F00E69C97 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D816121C14798F00E69C97 /* DBManager.m */; };
@@ -99,6 +100,8 @@
 		9084A4D91C80DAB6002C4385 /* StudentReviewApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentReviewApi.m; path = Sling/API/StudentReviewApi.m; sourceTree = SOURCE_ROOT; };
 		9084A4E01C80E53A002C4385 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingCell.h; path = "Sling/Custom Cells/SettingCell.h"; sourceTree = SOURCE_ROOT; };
 		9084A4E11C80E53A002C4385 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingCell.m; path = "Sling/Custom Cells/SettingCell.m"; sourceTree = SOURCE_ROOT; };
+		9084A4E31C80EC91002C4385 /* NoResourceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoResourceView.h; path = "Sling/Custom Views/NoResourceView.h"; sourceTree = SOURCE_ROOT; };
+		9084A4E41C80EC91002C4385 /* NoResourceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoResourceView.m; path = "Sling/Custom Views/NoResourceView.m"; sourceTree = SOURCE_ROOT; };
 		90D8160D1C14798F00E69C97 /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonFunction.h; path = Utils/CommonFunction.h; sourceTree = "<group>"; };
 		90D8160E1C14798F00E69C97 /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonFunction.m; path = Utils/CommonFunction.m; sourceTree = "<group>"; };
 		90D8160F1C14798F00E69C97 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Utils/Constants.h; sourceTree = "<group>"; };
@@ -357,6 +360,8 @@
 				90D816441C147BA600E69C97 /* UIDashedLine.m */,
 				90D816451C147BA600E69C97 /* UILabel+CustomStyle.h */,
 				90D816461C147BA600E69C97 /* UILabel+CustomStyle.m */,
+				9084A4E31C80EC91002C4385 /* NoResourceView.h */,
+				9084A4E41C80EC91002C4385 /* NoResourceView.m */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -666,6 +671,7 @@
 				9084A4D71C80D771002C4385 /* NoticeBoardApi.m in Sources */,
 				907E841D1C7CC7EC005FFFB5 /* BaseNavigationController.m in Sources */,
 				90E6D06F1C7CE21E00D64CB9 /* ReviewViewController.m in Sources */,
+				9084A4E51C80EC91002C4385 /* NoResourceView.m in Sources */,
 				907E84131C7CC7CD005FFFB5 /* NoticeBoard.m in Sources */,
 				90D8166E1C147E1000E69C97 /* JVFloatLabeledTextField.m in Sources */,
 				90D816331C14798F00E69C97 /* ImagePrefetcher.m in Sources */,

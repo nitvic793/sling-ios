@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "NavigationHeaderView.h"
 #import "FontIconMapping.h"
+#import "NoResourceView.h"
 #import "SVProgressHUD.h"
 #import <UIKit/UIKit.h>
 #import "RavenClient.h"
@@ -53,6 +54,14 @@ typedef NS_ENUM(NSUInteger, iPhone) {
 };
 
 @interface CommonFunction : NSObject
+
+#pragma mark - No Resource View
+
++ (NoResourceView *) noInternetResourceViewWithFrame:(CGRect) frame andDelegate:delegate;
+
++ (NoResourceView *) noServerResourceViewWithFrame:(CGRect) frame andDelegate:delegate;
+
+#pragma mark -
 
 + (void) printMethodTrace;
 

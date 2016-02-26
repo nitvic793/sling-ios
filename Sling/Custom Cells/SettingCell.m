@@ -20,7 +20,7 @@
     if (self)
     {
         nameLabel = [[UILabel alloc] init];
-        [nameLabel setFont:FONT_BOLD_12];
+        [nameLabel setFont:FONT_REGULAR_14];
         
         seperator = [[UILabel alloc] init];
         [seperator setBackgroundColor:UIColorFromRGB(TABLE_VIEW_SEPARATOR_COLOR)];

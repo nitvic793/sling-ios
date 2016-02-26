@@ -21,6 +21,27 @@
 
 @implementation CommonFunction
 
+#pragma mark - No Resource View
+
++(NoResourceView *) noInternetResourceViewWithFrame:(CGRect) frame andDelegate:delegate
+{
+    NoResourceView *nrv = [[NoResourceView alloc] initWithIconText:FONT_ICON_COG andMainText:NSLocalizedString(@"NO_INTERNET_RES_MAIN", nil) andSubText:NSLocalizedString(@"NO_INTERNET_RES_SUB", nil) andButtonText:NSLocalizedString(@"NO_INTERNET_RES_BUTTON", nil) andTag:NO_RESOURCE_INTERNET_TAG];
+    [nrv setFrame:frame];
+    [nrv setDelegate:delegate];
+    return nrv;
+}
+
++(NoResourceView *) noServerResourceViewWithFrame:(CGRect) frame andDelegate:delegate
+{
+    NoResourceView *nrv = [[NoResourceView alloc] initWithIconText:FONT_ICON_COG andMainText:NSLocalizedString(@"SERVER_RES_MAIN", nil) andSubText:NSLocalizedString(@"SERVER_RES_SUB", nil) andButtonText:NSLocalizedString(@"SERVER_RES_BUTTON", nil) andTag:NO_RESOURCE_SERVER_TAG];
+    [[nrv iconLabel] setFont:FONT_ICON(105)];
+    [nrv setFrame:frame];
+    [nrv setDelegate:delegate];
+    return nrv;
+}
+
+#pragma mark -
+
 +(void) printMethodTrace
 {
     NSString *sourceString = [[NSThread callStackSymbols] objectAtIndex:1];
