@@ -44,10 +44,9 @@
     notices = [NSMutableArray array];
     for (NSMutableDictionary *noticeDict in responseObject) {
         Notice *notice = [[Notice alloc] init];
-        [notice parseObject:responseObject withInitialParams:params];
+        [notice parseObject:noticeDict withInitialParams:params];
         [notices addObject:notice];
     }
-    
 }
 
 @end

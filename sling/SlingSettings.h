@@ -17,6 +17,10 @@
 // DEVELOPMENT
 
 #define SLING_DEBUG 1
+#define SLING_CHAT_APPLICATION_ID 33581
+#define SLING_CHAT_AUTH_KEY @"EzDzJWMRk9UaHaK"
+#define SLING_CHAT_AUTH_SECRET @"jc7ddKMDsAqsqCT"
+#define SLING_CHAT_ACCOUNT_KEY @"QyYej5Hd3zk2PUgQiqy7"
 
 #else
 // PRODUCTION
@@ -25,6 +29,10 @@
 
 #define NSLog(s,...)
 #define SLING_DEBUG 0
+#define SLING_CHAT_APPLICATION_ID 33581
+#define SLING_CHAT_AUTH_KEY @"EzDzJWMRk9UaHaK"
+#define SLING_CHAT_AUTH_SECRET @"jc7ddKMDsAqsqCT"
+#define SLING_CHAT_ACCOUNT_KEY @"QyYej5Hd3zk2PUgQiqy7"
 
 #endif
 

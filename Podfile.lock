@@ -18,7 +18,11 @@ PODS:
   - FMDB (2.6):
     - FMDB/standard (= 2.6)
   - FMDB/standard (2.6)
+  - JSQMessagesViewController (7.2.0):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - pop (1.0.9)
+  - QuickBlox (2.6.6)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -28,7 +32,9 @@ DEPENDENCIES:
   - AFNetworking
   - AMScrollingNavbar (~> 1.5.1)
   - FMDB
+  - JSQMessagesViewController
   - pop (~> 1.0)
+  - QuickBlox
   - SDWebImage (~> 3.7)
   - SVProgressHUD
 
@@ -36,7 +42,10 @@ SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   AMScrollingNavbar: 767ed2db60d927a809bddff5d01b739b7020b12b
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
+  JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  QuickBlox: 8a860f96d8d4694f9d35fbeac9bbb5bc09ed71ec
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
