@@ -7,6 +7,7 @@
 //
 
 #import "ChatViewController.h"
+#import <Quickblox/Quickblox.h>
 
 @implementation ChatViewController
 {
@@ -18,9 +19,17 @@
     self = [super init];
     if (self)
     {
+        [self initalizeVariables];
         [self setupViews];
     }
     return self;
+}
+
+- (void) initalizeVariables
+{
+    [QBSettings setApplicationID:SLING_CHAT_APPLICATION_ID];
+    [QBSettings setAuthKey:SLING_CHAT_AUTH_KEY];
+    [QBSettings setAuthSecret:SLING_CHAT_AUTH_SECRET];
 }
 
 -(void) setupViews
