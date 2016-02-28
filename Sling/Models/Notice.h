@@ -11,10 +11,10 @@
 
 @interface Notice : BaseObject
 
+@property (nonatomic, strong) ClassRoom *classRoom;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *message;
 @property (nonatomic, strong) NSDate *date;
-@property (nonatomic, strong) NSString *notice;
-@property (nonatomic, strong) ClassRoom *classNumber;
-
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, strong) NSDate *updatedAt;
 

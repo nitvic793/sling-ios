@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface NoticeBoardViewController : BaseViewController
+@interface NoticeBoardViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end

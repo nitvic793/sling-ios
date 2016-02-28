@@ -169,5 +169,4 @@ static NSString * cellIdentifier = @"SettingListCell";
     }
 }
 
-
 @end

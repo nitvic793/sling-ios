@@ -167,7 +167,7 @@ static NSString *HTTP_DELETE = @"DELETE";
 #define BLU5                  0x59b7cf
 #define BLU6                  0x6dc0d5
 
-#define GROFERS_ORANGE        0xE96125
+#define SLING_BLUE            0x3C96F2
 #define GROFERS_ORANGE_P      0xde5416
 #define GROFERS_BLUE          0x37a3be
 #define GROFERS_BLUE_P        0x3192aa

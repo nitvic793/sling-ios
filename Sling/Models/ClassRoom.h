@@ -11,11 +11,11 @@
 
 @interface ClassRoom : BaseObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *deprecationDate;
+@property (nonatomic, strong) NSString *subject;
 @property (nonatomic, strong) NSString *room;
 @property (nonatomic, strong) Teacher *teacher;
 
+@property (nonatomic, strong) NSString *deprecationDate;
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, strong) NSDate *updatedAt;
 

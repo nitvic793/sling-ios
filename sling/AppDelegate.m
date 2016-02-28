@@ -17,8 +17,21 @@
 
 @synthesize window;
 
+#pragma mark - Application Did Launch
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"-------------------\n%@",launchOptions);
+    
+    // Setting Crashlytics
+    //[self setupCrashlytics];
+    
+    // Setup Configuration
+    //[Configuration sharedConfiguration];
+    
+    // Setup App Variables
+    [self initalizeApplicationVariablesForApplication:application andLaunchOptions:launchOptions];
+    
     [self startFirstActivity];
     
     return YES;
@@ -39,6 +52,16 @@
     
     [window makeKeyAndVisible];
 }
+
+#pragma mark - Setting Application
+
+-(void) initalizeApplicationVariablesForApplication:(UIApplication *) application andLaunchOptions:(NSDictionary *)launchOptions
+{
+    // Setting up the Loader UI
+    [SVProgressHUD setForegroundColor:UIColorFromRGB(SLING_BLUE)];
+}
+
+#pragma mark - App Life Cycle
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -61,5 +84,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end
