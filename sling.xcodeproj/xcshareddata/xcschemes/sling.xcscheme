@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9050AC8D1C14123700CEB7AE"
                BuildableName = "Sling.temp_caseinsensitive_rename.app"
                BlueprintName = "sling"
-               ReferencedContainer = "container:Sling.xcodeproj">
+               ReferencedContainer = "container:sling.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "9050AC8D1C14123700CEB7AE"
             BuildableName = "Sling.temp_caseinsensitive_rename.app"
             BlueprintName = "sling"
-            ReferencedContainer = "container:Sling.xcodeproj">
+            ReferencedContainer = "container:sling.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "9050AC8D1C14123700CEB7AE"
             BuildableName = "Sling.temp_caseinsensitive_rename.app"
             BlueprintName = "sling"
-            ReferencedContainer = "container:Sling.xcodeproj">
+            ReferencedContainer = "container:sling.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "9050AC8D1C14123700CEB7AE"
             BuildableName = "Sling.temp_caseinsensitive_rename.app"
             BlueprintName = "sling"
-            ReferencedContainer = "container:Sling.xcodeproj">
+            ReferencedContainer = "container:sling.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
