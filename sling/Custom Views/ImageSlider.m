@@ -55,7 +55,7 @@
     [mainScrollView setContentSize:CGSizeMake(xOffset, H(mainScrollView))];
     
     pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, H(self) - 30, W(self), 20)];
-    [pageControl setCurrentPageIndicatorTintColor:UIColorFromRGB(GROFERS_ORANGE)];
+    [pageControl setCurrentPageIndicatorTintColor:UIColorFromRGB(SLING_BLUE)];
     [pageControl setPageIndicatorTintColor:UIColorFromRGB(GBL4)];
     [pageControl setHidesForSinglePage:YES];
     [pageControl setNumberOfPages:sliderImages.count];

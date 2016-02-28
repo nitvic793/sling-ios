@@ -30,6 +30,7 @@
     }
     return self;
 }
+
 -(void) setText:(NSString*) text
 {
     [nameLabel setText:text];

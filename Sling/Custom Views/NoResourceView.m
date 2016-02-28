@@ -166,7 +166,7 @@
         {
             button = [UIButton buttonWithType:UIButtonTypeSystem];
             [[button titleLabel] setFont:FONT_BOLD_16];
-            [button setBackgroundColor:UIColorFromRGB(GROFERS_ORANGE)];
+            [button setBackgroundColor:UIColorFromRGB(SLING_BLUE)];
             [button setTitle:buttonText forState:UIControlStateNormal];
             [button setTitle:buttonText forState:UIControlStateHighlighted];
             [button setTitleColor:UIColorFromRGB(WHITE_COLOR) forState:UIControlStateNormal];

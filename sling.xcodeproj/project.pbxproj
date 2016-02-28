@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9012217A1C82B392001BB5EB /* NoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 901221791C82B392001BB5EB /* NoticeCell.m */; };
 		9050AC931C14123700CEB7AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC921C14123700CEB7AE /* main.m */; };
 		9050AC961C14123700CEB7AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC951C14123700CEB7AE /* AppDelegate.m */; };
 		9050AC9E1C14123700CEB7AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9050AC9D1C14123700CEB7AE /* Assets.xcassets */; };
@@ -68,6 +69,8 @@
 
 /* Begin PBXFileReference section */
 		46C5AD534F037E03E6269EA2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		901221781C82B392001BB5EB /* NoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoticeCell.h; path = "Sling/Custom Cells/NoticeCell.h"; sourceTree = SOURCE_ROOT; };
+		901221791C82B392001BB5EB /* NoticeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoticeCell.m; path = "Sling/Custom Cells/NoticeCell.m"; sourceTree = SOURCE_ROOT; };
 		9050AC8E1C14123700CEB7AE /* Sling.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sling.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9050AC921C14123700CEB7AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9050AC941C14123700CEB7AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -343,6 +346,8 @@
 			children = (
 				9084A4E01C80E53A002C4385 /* SettingCell.h */,
 				9084A4E11C80E53A002C4385 /* SettingCell.m */,
+				901221781C82B392001BB5EB /* NoticeCell.h */,
+				901221791C82B392001BB5EB /* NoticeCell.m */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 				90D816701C147E1000E69C97 /* NSString+TextDirectionality.m in Sources */,
 				90D8164A1C147BA600E69C97 /* UIDashedLine.m in Sources */,
 				9084A4D41C80D2CA002C4385 /* UserApi.m in Sources */,
+				9012217A1C82B392001BB5EB /* NoticeCell.m in Sources */,
 				90E6D0721C7CE23100D64CB9 /* SettingsViewController.m in Sources */,
 				90D8162E1C14798F00E69C97 /* FontIconMapping.m in Sources */,
 				9050AC961C14123700CEB7AE /* AppDelegate.m in Sources */,
