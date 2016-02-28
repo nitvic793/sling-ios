@@ -71,7 +71,7 @@
 		46C5AD534F037E03E6269EA2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		901221781C82B392001BB5EB /* NoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoticeCell.h; path = "Sling/Custom Cells/NoticeCell.h"; sourceTree = SOURCE_ROOT; };
 		901221791C82B392001BB5EB /* NoticeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoticeCell.m; path = "Sling/Custom Cells/NoticeCell.m"; sourceTree = SOURCE_ROOT; };
-		9050AC8E1C14123700CEB7AE /* Sling.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sling.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9050AC8E1C14123700CEB7AE /* sling.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sling.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9050AC921C14123700CEB7AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9050AC941C14123700CEB7AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9050AC951C14123700CEB7AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		9050AC8F1C14123700CEB7AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9050AC8E1C14123700CEB7AE /* Sling.temp_caseinsensitive_rename.app */,
+				9050AC8E1C14123700CEB7AE /* sling.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -563,7 +563,7 @@
 			);
 			name = sling;
 			productName = sling;
-			productReference = 9050AC8E1C14123700CEB7AE /* Sling.temp_caseinsensitive_rename.app */;
+			productReference = 9050AC8E1C14123700CEB7AE /* sling.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -580,7 +580,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9050AC891C14123700CEB7AE /* Build configuration list for PBXProject "Sling" */;
+			buildConfigurationList = 9050AC891C14123700CEB7AE /* Build configuration list for PBXProject "sling" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -827,7 +827,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bitstax.sling;
-				PRODUCT_NAME = Sling.temp_caseinsensitive_rename;
+				PRODUCT_NAME = sling.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -843,7 +843,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bitstax.sling;
-				PRODUCT_NAME = Sling.temp_caseinsensitive_rename;
+				PRODUCT_NAME = sling.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -851,7 +851,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9050AC891C14123700CEB7AE /* Build configuration list for PBXProject "Sling" */ = {
+		9050AC891C14123700CEB7AE /* Build configuration list for PBXProject "sling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9050ACA31C14123700CEB7AE /* Debug */,
