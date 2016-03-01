@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9012217A1C82B392001BB5EB /* NoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 901221791C82B392001BB5EB /* NoticeCell.m */; };
+		902921631C83967E008A91A3 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 902921621C83967E008A91A3 /* ChatCell.m */; };
 		9050AC931C14123700CEB7AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC921C14123700CEB7AE /* main.m */; };
 		9050AC961C14123700CEB7AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050AC951C14123700CEB7AE /* AppDelegate.m */; };
 		9050AC9E1C14123700CEB7AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9050AC9D1C14123700CEB7AE /* Assets.xcassets */; };
@@ -71,6 +72,8 @@
 		46C5AD534F037E03E6269EA2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		901221781C82B392001BB5EB /* NoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoticeCell.h; path = "Sling/Custom Cells/NoticeCell.h"; sourceTree = SOURCE_ROOT; };
 		901221791C82B392001BB5EB /* NoticeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoticeCell.m; path = "Sling/Custom Cells/NoticeCell.m"; sourceTree = SOURCE_ROOT; };
+		902921611C83967E008A91A3 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatCell.h; path = "Custom Cells/ChatCell.h"; sourceTree = "<group>"; };
+		902921621C83967E008A91A3 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatCell.m; path = "Custom Cells/ChatCell.m"; sourceTree = "<group>"; };
 		9050AC8E1C14123700CEB7AE /* sling.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sling.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9050AC921C14123700CEB7AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9050AC941C14123700CEB7AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				9084A4E11C80E53A002C4385 /* SettingCell.m */,
 				901221781C82B392001BB5EB /* NoticeCell.h */,
 				901221791C82B392001BB5EB /* NoticeCell.m */,
+				902921611C83967E008A91A3 /* ChatCell.h */,
+				902921621C83967E008A91A3 /* ChatCell.m */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -677,6 +682,7 @@
 				907E841D1C7CC7EC005FFFB5 /* BaseNavigationController.m in Sources */,
 				9084A4E81C80F423002C4385 /* ClassRoom.m in Sources */,
 				90E6D06F1C7CE21E00D64CB9 /* ReviewViewController.m in Sources */,
+				902921631C83967E008A91A3 /* ChatCell.m in Sources */,
 				9084A4E51C80EC91002C4385 /* NoResourceView.m in Sources */,
 				90D8166E1C147E1000E69C97 /* JVFloatLabeledTextField.m in Sources */,
 				90D816331C14798F00E69C97 /* ImagePrefetcher.m in Sources */,

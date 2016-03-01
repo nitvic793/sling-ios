@@ -54,7 +54,7 @@ static NSString * cellIdentifier = @"NoticeListCell";
 
 -(void) createNoticeBoardTableView
 {
-    noticeBoardTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [CommonFunction getPhoneWidth], H([self view]) - TAB_BAR_HEIGHT)];
+    noticeBoardTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [CommonFunction getPhoneWidth], H([self view])- TAB_BAR_HEIGHT)];
     [noticeBoardTableView setDelegate:self];
     [noticeBoardTableView setDataSource:self];
     [noticeBoardTableView setBackgroundColor:UIColorFromRGB(LOADING_BG_COLOR)];
@@ -139,7 +139,6 @@ static NSString * cellIdentifier = @"NoticeListCell";
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
 }
-
 
 #pragma mark - No Resource Delegate
 
